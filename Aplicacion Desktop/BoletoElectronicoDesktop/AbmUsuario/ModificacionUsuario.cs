@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.AbmTarjetas
+namespace BoletoElectronicoDesktop.AbmUsuario
 {
-    public partial class FormAbmTarjetas : Form
+    public partial class ModificacionUsuario : Form
     {
-        public FormAbmTarjetas()
+        public ModificacionUsuario()
         {
             InitializeComponent();
         }
