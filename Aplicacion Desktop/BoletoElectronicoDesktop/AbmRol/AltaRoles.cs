@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmRol
 {
-    public partial class FormAbmRol : Form
+    public partial class AltaRoles : Form
     {
-        public FormAbmRol()
+        public AltaRoles()
         {
             InitializeComponent();
         }

@@ -69,11 +69,35 @@
     <Compile Include="AbmBeneficiarios\FormAbmBeneficarios.Designer.cs">
       <DependentUpon>FormAbmBeneficarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmClientes\FormAbmClientes.cs">
+    <Compile Include="AbmClientes\AltaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmClientes\FormAbmClientes.Designer.cs">
-      <DependentUpon>FormAbmClientes.cs</DependentUpon>
+    <Compile Include="AbmClientes\AltaClientes.Designer.cs">
+      <DependentUpon>AltaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmClientes\BajaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmClientes\BajaCliente.Designer.cs">
+      <DependentUpon>BajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmClientes\ModificacionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmClientes\ModificacionCliente.Designer.cs">
+      <DependentUpon>ModificacionCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmClientes\PrincipalCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmClientes\PrincipalCliente.Designer.cs">
+      <DependentUpon>PrincipalCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmClientes\SeleccionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmClientes\SeleccionCliente.Designer.cs">
+      <DependentUpon>SeleccionCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmPost-Net\FormAbmPostnet.cs">
       <SubType>Form</SubType>
@@ -81,29 +105,101 @@
     <Compile Include="AbmPost-Net\FormAbmPostnet.Designer.cs">
       <DependentUpon>FormAbmPostnet.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRol\FormAbmRol.cs">
+    <Compile Include="AbmRol\AltaRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmRol\FormAbmRol.Designer.cs">
-      <DependentUpon>FormAbmRol.cs</DependentUpon>
+    <Compile Include="AbmRol\AltaRoles.Designer.cs">
+      <DependentUpon>AltaRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRubros\FormAbmRubros.cs">
+    <Compile Include="AbmRol\BajaRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmRubros\FormAbmRubros.Designer.cs">
-      <DependentUpon>FormAbmRubros.cs</DependentUpon>
+    <Compile Include="AbmRol\BajaRoles.Designer.cs">
+      <DependentUpon>BajaRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmTarjetas\FormAbmTarjetas.cs">
+    <Compile Include="AbmRol\ModificacionRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmTarjetas\FormAbmTarjetas.Designer.cs">
-      <DependentUpon>FormAbmTarjetas.cs</DependentUpon>
+    <Compile Include="AbmRol\ModificacionRoles.Designer.cs">
+      <DependentUpon>ModificacionRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmUsuario\FormAbmUsuario.cs">
+    <Compile Include="AbmRol\PrincipalRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmUsuario\FormAbmUsuario.Designer.cs">
-      <DependentUpon>FormAbmUsuario.cs</DependentUpon>
+    <Compile Include="AbmRol\PrincipalRol.Designer.cs">
+      <DependentUpon>PrincipalRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\SeleccionRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\SeleccionRol.Designer.cs">
+      <DependentUpon>SeleccionRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\AltaTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\AltaTarjetas.Designer.cs">
+      <DependentUpon>AltaTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\BajaTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\BajaTarjetas.Designer.cs">
+      <DependentUpon>BajaTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\ModificacionTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\ModificacionTarjetas.Designer.cs">
+      <DependentUpon>ModificacionTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\PrincipalTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\PrincipalTarjetas.Designer.cs">
+      <DependentUpon>PrincipalTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\SeleccionClienteAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\SeleccionClienteAlta.Designer.cs">
+      <DependentUpon>SeleccionClienteAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmTarjetas\SeleccionClienteBM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmTarjetas\SeleccionClienteBM.Designer.cs">
+      <DependentUpon>SeleccionClienteBM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\BajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\BajaUsuario.Designer.cs">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\ModificacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\ModificacionUsuario.Designer.cs">
+      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\PrincipalUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\PrincipalUsuario.Designer.cs">
+      <DependentUpon>PrincipalUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmUsuario\SeleccionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmUsuario\SeleccionUsuario.Designer.cs">
+      <DependentUpon>SeleccionUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="CargaCredito\FormCargaCredito.cs">
       <SubType>Form</SubType>
@@ -143,8 +239,74 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AbmTarjetas\FormAbmTarjetas.resx">
-      <DependentUpon>FormAbmTarjetas.cs</DependentUpon>
+    <EmbeddedResource Include="AbmClientes\AltaClientes.resx">
+      <DependentUpon>AltaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmClientes\BajaCliente.resx">
+      <DependentUpon>BajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmClientes\ModificacionCliente.resx">
+      <DependentUpon>ModificacionCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmClientes\PrincipalCliente.resx">
+      <DependentUpon>PrincipalCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmClientes\SeleccionCliente.resx">
+      <DependentUpon>SeleccionCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\AltaRoles.resx">
+      <DependentUpon>AltaRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\BajaRoles.resx">
+      <DependentUpon>BajaRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\ModificacionRoles.resx">
+      <DependentUpon>ModificacionRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\PrincipalRol.resx">
+      <DependentUpon>PrincipalRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\SeleccionRol.resx">
+      <DependentUpon>SeleccionRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\AltaTarjetas.resx">
+      <DependentUpon>AltaTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\BajaTarjetas.resx">
+      <DependentUpon>BajaTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\ModificacionTarjetas.resx">
+      <DependentUpon>ModificacionTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\PrincipalTarjetas.resx">
+      <DependentUpon>PrincipalTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\SeleccionClienteAlta.resx">
+      <DependentUpon>SeleccionClienteAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmTarjetas\SeleccionClienteBM.resx">
+      <DependentUpon>SeleccionClienteBM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\BajaUsuario.resx">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\ModificacionUsuario.resx">
+      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\PrincipalUsuario.resx">
+      <DependentUpon>PrincipalUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmUsuario\SeleccionUsuario.resx">
+      <DependentUpon>SeleccionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.es-AR.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

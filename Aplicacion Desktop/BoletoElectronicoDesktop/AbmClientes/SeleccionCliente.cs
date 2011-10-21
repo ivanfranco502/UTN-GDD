@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.AbmRubros
+namespace BoletoElectronicoDesktop.AbmClientes
 {
-    public partial class FormAbmRubros : Form
+    public partial class SeleccionCliente : Form
     {
-        public FormAbmRubros()
+        public SeleccionCliente()
         {
             InitializeComponent();
         }

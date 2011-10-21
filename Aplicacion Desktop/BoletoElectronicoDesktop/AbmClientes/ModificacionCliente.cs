@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmClientes
 {
-    public partial class FormAbmClientes : Form
+    public partial class ModificacionCliente : Form
     {
-        public FormAbmClientes()
+        public ModificacionCliente()
         {
             InitializeComponent();
         }
