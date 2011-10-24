@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
-    public partial class FormAbmBeneficarios : Form
+    public partial class SeleccionarPostNets : Form
     {
-        public FormAbmBeneficarios()
+        public SeleccionarPostNets()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

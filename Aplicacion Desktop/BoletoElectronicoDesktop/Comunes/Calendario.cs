@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.EfectuarCompra
+namespace BoletoElectronicoDesktop.Comunes
 {
-    public partial class FormEfectuarCompra : Form
+    public partial class Calendario : Form
     {
-        public FormEfectuarCompra()
+        public Calendario()
         {
             InitializeComponent();
         }
+
+      
     }
 }

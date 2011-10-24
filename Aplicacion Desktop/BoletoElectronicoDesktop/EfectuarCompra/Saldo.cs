@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.MejoresRubros
+namespace BoletoElectronicoDesktop.Facturación
 {
-    public partial class FormMejoresRubros : Form
+    public partial class Saldo : Form
     {
-        public FormMejoresRubros()
+        public Saldo()
         {
             InitializeComponent();
         }

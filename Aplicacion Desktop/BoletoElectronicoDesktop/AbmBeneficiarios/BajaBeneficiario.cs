@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.TarjetasPremium
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
-    public partial class FormTarjetasPremium : Form
+    public partial class BajaBeneficiario : Form
     {
-        public FormTarjetasPremium()
+        public BajaBeneficiario()
         {
             InitializeComponent();
         }
