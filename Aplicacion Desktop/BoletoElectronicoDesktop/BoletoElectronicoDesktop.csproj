@@ -63,11 +63,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbmBeneficiarios\FormAbmBeneficarios.cs">
+    <Compile Include="AbmBeneficiarios\AltaBeneficarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmBeneficiarios\FormAbmBeneficarios.Designer.cs">
-      <DependentUpon>FormAbmBeneficarios.cs</DependentUpon>
+    <Compile Include="AbmBeneficiarios\AltaBeneficarios.Designer.cs">
+      <DependentUpon>AltaBeneficarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\BajaBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\BajaBeneficiario.Designer.cs">
+      <DependentUpon>BajaBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\ModificacionBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\ModificacionBeneficiario.Designer.cs">
+      <DependentUpon>ModificacionBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\SeleccionarBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\SeleccionarBeneficiario.Designer.cs">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\SeleccionarPostNets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmBeneficiarios\SeleccionarPostNets.Designer.cs">
+      <DependentUpon>SeleccionarPostNets.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmClientes\AltaClientes.cs">
       <SubType>Form</SubType>
@@ -207,11 +231,35 @@
     <Compile Include="CargaCredito\FormCargaCredito.Designer.cs">
       <DependentUpon>FormCargaCredito.cs</DependentUpon>
     </Compile>
-    <Compile Include="EfectuarCompra\FormEfectuarCompra.cs">
+    <Compile Include="ClientesPremium\ClientesPremium.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EfectuarCompra\FormEfectuarCompra.Designer.cs">
-      <DependentUpon>FormEfectuarCompra.cs</DependentUpon>
+    <Compile Include="ClientesPremium\ClientesPremium.Designer.cs">
+      <DependentUpon>ClientesPremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comunes\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comunes\Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EfectuarCompra\Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EfectuarCompra\Facturacion.Designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EfectuarCompra\Saldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EfectuarCompra\Saldo.Designer.cs">
+      <DependentUpon>Saldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EfectuarCompra\SeleccionarBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EfectuarCompra\SeleccionarBeneficiario.Designer.cs">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -219,17 +267,17 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="InactividadTarjetas\InactividadTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InactividadTarjetas\InactividadTarjetas.Designer.cs">
+      <DependentUpon>InactividadTarjetas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MejoresRubros\FormMejoresRubros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MejoresRubros\FormMejoresRubros.Designer.cs">
-      <DependentUpon>FormMejoresRubros.cs</DependentUpon>
     </Compile>
     <Compile Include="PagoEmpresas\FormPagoEmpresas.cs">
       <SubType>Form</SubType>
@@ -239,6 +287,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AbmBeneficiarios\AltaBeneficarios.resx">
+      <DependentUpon>AltaBeneficarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmBeneficiarios\BajaBeneficiario.resx">
+      <DependentUpon>BajaBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmBeneficiarios\ModificacionBeneficiario.resx">
+      <DependentUpon>ModificacionBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmBeneficiarios\SeleccionarBeneficiario.resx">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmBeneficiarios\SeleccionarPostNets.resx">
+      <DependentUpon>SeleccionarPostNets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AbmClientes\AltaClientes.resx">
       <DependentUpon>AltaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,14 +365,38 @@
     <EmbeddedResource Include="AbmUsuario\SeleccionUsuario.resx">
       <DependentUpon>SeleccionUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CargaCredito\FormCargaCredito.resx">
+      <DependentUpon>FormCargaCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesPremium\ClientesPremium.resx">
+      <DependentUpon>ClientesPremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comunes\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EfectuarCompra\Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EfectuarCompra\Saldo.resx">
+      <DependentUpon>Saldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EfectuarCompra\SeleccionarBeneficiario.resx">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.es-AR.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InactividadTarjetas\InactividadTarjetas.resx">
+      <DependentUpon>InactividadTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoEmpresas\FormPagoEmpresas.resx">
+      <DependentUpon>FormPagoEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -328,18 +415,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="TarjetasPremium\FormTarjetasPremium.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TarjetasPremium\FormTarjetasPremium.Designer.cs">
-      <DependentUpon>FormTarjetasPremium.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TopEmpresas\FormTopEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TopEmpresas\FormTopEmpresas.Designer.cs">
-      <DependentUpon>FormTopEmpresas.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -373,9 +448,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AbmEmpleados\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

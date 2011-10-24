@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace BoletoElectronicoDesktop.TopEmpresas
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
-    public partial class FormTopEmpresas : Form
+    public partial class ModificacionBeneficiario : Form
     {
-        public FormTopEmpresas()
+        public ModificacionBeneficiario()
         {
             InitializeComponent();
         }
