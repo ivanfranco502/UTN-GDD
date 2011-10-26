@@ -31,8 +31,6 @@ namespace BoletoElectronicoDesktop.Login
             SqlConnection con;
             SqlCommand com;
             SqlDataReader reader;
-            FormPrincipal fp;
-            Int32 cod_usuario;
             
             if (this.txtUsername.Text == "" || this.txtPassword.Text == "")
             {
@@ -44,16 +42,17 @@ namespace BoletoElectronicoDesktop.Login
                 com = new SqlCommand("SELECT PASSWORD, COD_USUARIO, CANT_LOG_FALLA, HABILITADO FROM NTVC.USUARIO where USERNAME = '" + this.txtUsername.Text + "'", con);
                 con.Open();
                 reader = com.ExecuteReader();
-                
+
                 if (reader.Read())
                 {
                     if ((Int32)reader.GetValue(3) == 1)
                     {
                         String pass = reader["PASSWORD"].ToString().Trim();
                         String passH = ((Encriptar.sha256(this.txtPassword.Text)));
-                        cod_usuario = (Int32)reader.GetValue(1);
+                        cod_usuario = Convert.ToInt32(reader["COD_USUARIO"]);
                         if (pass == passH)
                         {
+                            reader.Close();
                             con.Close();
                             com = new SqlCommand("UPDATE NTVC.USUARIO set CANT_LOG_FALLA = 0 where COD_USUARIO = @cu", con);
                             com.Parameters.AddWithValue("@cu", cod_usuario);
@@ -61,13 +60,15 @@ namespace BoletoElectronicoDesktop.Login
                             com.ExecuteNonQuery();
                             con.Close();
                             this.Close();
-                            fp = new FormPrincipal(cod_usuario);
-                            fp.Show();
+                            //fp = new FormPrincipal(cod_usuario);
+                            //fp.Show();
+                            //fp.ShowDialog(this);
                         }
                         else
                         {
                             int cant_log_falla = (Int32)reader.GetValue(2);
                             cant_log_falla++;
+                            reader.Close();
                             con.Close();
                             com = new SqlCommand("UPDATE NTVC.USUARIO set CANT_LOG_FALLA = @clf where COD_USUARIO = @cu", con);
                             com.Parameters.AddWithValue("@clf", cant_log_falla);
@@ -94,12 +95,20 @@ namespace BoletoElectronicoDesktop.Login
                     }
                     else
                     {
+                        reader.Close();
                         con.Close();
                         MessageBox.Show("El usuario se encuentra inhabilitado.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                         this.txtUsername.Text = "";
                         this.txtPassword.Text = "";
                     }
 
+                }
+                else
+                {
+                    con.Close();
+                    MessageBox.Show("El nombre de usuario no existe.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                    this.txtUsername.Text = "";
+                    this.txtPassword.Text = "";
                 }
             }
 

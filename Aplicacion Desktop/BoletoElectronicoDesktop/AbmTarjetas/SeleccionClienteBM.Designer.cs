@@ -39,6 +39,8 @@
             this.botLimpiar = new System.Windows.Forms.Button();
             this.botBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.botModificar = new System.Windows.Forms.Button();
+            this.botEliminar = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +50,6 @@
             this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +123,7 @@
             // 
             // botLimpiar
             // 
-            this.botLimpiar.Location = new System.Drawing.Point(12, 98);
+            this.botLimpiar.Location = new System.Drawing.Point(15, 98);
             this.botLimpiar.Name = "botLimpiar";
             this.botLimpiar.Size = new System.Drawing.Size(75, 23);
             this.botLimpiar.TabIndex = 26;
@@ -150,12 +151,29 @@
             this.Calle,
             this.Número,
             this.Piso,
-            this.Depto,
-            this.Seleccionar});
+            this.Depto});
             this.dataGridView1.Location = new System.Drawing.Point(12, 136);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(418, 126);
             this.dataGridView1.TabIndex = 24;
+            // 
+            // botModificar
+            // 
+            this.botModificar.Location = new System.Drawing.Point(15, 297);
+            this.botModificar.Name = "botModificar";
+            this.botModificar.Size = new System.Drawing.Size(75, 23);
+            this.botModificar.TabIndex = 60;
+            this.botModificar.Text = "Modificar";
+            this.botModificar.UseVisualStyleBackColor = true;
+            // 
+            // botEliminar
+            // 
+            this.botEliminar.Location = new System.Drawing.Point(355, 297);
+            this.botEliminar.Name = "botEliminar";
+            this.botEliminar.Size = new System.Drawing.Size(75, 23);
+            this.botEliminar.TabIndex = 59;
+            this.botEliminar.Text = "Eliminar";
+            this.botEliminar.UseVisualStyleBackColor = true;
             // 
             // Nombre
             // 
@@ -211,16 +229,13 @@
             this.Depto.Name = "Depto";
             this.Depto.ReadOnly = true;
             // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            // 
             // SeleccionClienteBM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 276);
+            this.ClientSize = new System.Drawing.Size(449, 332);
+            this.Controls.Add(this.botModificar);
+            this.Controls.Add(this.botEliminar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -262,7 +277,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Número;
         private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
+        private System.Windows.Forms.Button botModificar;
+        private System.Windows.Forms.Button botEliminar;
 
     }
 }

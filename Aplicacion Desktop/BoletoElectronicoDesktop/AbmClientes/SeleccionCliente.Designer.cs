@@ -50,6 +50,8 @@
             this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.botModificar = new System.Windows.Forms.Button();
+            this.botEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,11 +225,31 @@
             this.Seleccionar.Text = "Seleccionar";
             this.Seleccionar.UseColumnTextForButtonValue = true;
             // 
+            // botModificar
+            // 
+            this.botModificar.Location = new System.Drawing.Point(12, 285);
+            this.botModificar.Name = "botModificar";
+            this.botModificar.Size = new System.Drawing.Size(75, 23);
+            this.botModificar.TabIndex = 60;
+            this.botModificar.Text = "Modificar";
+            this.botModificar.UseVisualStyleBackColor = true;
+            // 
+            // botEliminar
+            // 
+            this.botEliminar.Location = new System.Drawing.Point(355, 285);
+            this.botEliminar.Name = "botEliminar";
+            this.botEliminar.Size = new System.Drawing.Size(75, 23);
+            this.botEliminar.TabIndex = 59;
+            this.botEliminar.Text = "Eliminar";
+            this.botEliminar.UseVisualStyleBackColor = true;
+            // 
             // SeleccionCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 262);
+            this.ClientSize = new System.Drawing.Size(440, 320);
+            this.Controls.Add(this.botModificar);
+            this.Controls.Add(this.botEliminar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -271,5 +293,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
         private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
+        private System.Windows.Forms.Button botModificar;
+        private System.Windows.Forms.Button botEliminar;
     }
 }

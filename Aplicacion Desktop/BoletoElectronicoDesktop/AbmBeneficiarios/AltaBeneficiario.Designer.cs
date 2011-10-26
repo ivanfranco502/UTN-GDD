@@ -1,6 +1,6 @@
 ﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
-    partial class AltaBeneficarios
+    partial class AltaBeneficiario
     {
         /// <summary>
         /// Required designer variable.

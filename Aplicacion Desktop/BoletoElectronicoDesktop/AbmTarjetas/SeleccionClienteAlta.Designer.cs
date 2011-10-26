@@ -48,6 +48,8 @@
             this.textDNI = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.botLimpiar = new System.Windows.Forms.Button();
+            this.botBuscar = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +59,7 @@
             this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.botLimpiar = new System.Windows.Forms.Button();
-            this.botBuscar = new System.Windows.Forms.Button();
+            this.botSeleccionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -238,12 +238,29 @@
             this.Calle,
             this.Número,
             this.Piso,
-            this.Depto,
-            this.Seleccionar});
+            this.Depto});
             this.dataGridView1.Location = new System.Drawing.Point(13, 223);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(418, 126);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // botLimpiar
+            // 
+            this.botLimpiar.Location = new System.Drawing.Point(13, 185);
+            this.botLimpiar.Name = "botLimpiar";
+            this.botLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.botLimpiar.TabIndex = 23;
+            this.botLimpiar.Text = "Limpiar";
+            this.botLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // botBuscar
+            // 
+            this.botBuscar.Location = new System.Drawing.Point(356, 185);
+            this.botBuscar.Name = "botBuscar";
+            this.botBuscar.Size = new System.Drawing.Size(75, 23);
+            this.botBuscar.TabIndex = 22;
+            this.botBuscar.Text = "Buscar";
+            this.botBuscar.UseVisualStyleBackColor = true;
             // 
             // Nombre
             // 
@@ -299,34 +316,21 @@
             this.Depto.Name = "Depto";
             this.Depto.ReadOnly = true;
             // 
-            // Seleccionar
+            // botSeleccionar
             // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            // 
-            // botLimpiar
-            // 
-            this.botLimpiar.Location = new System.Drawing.Point(13, 185);
-            this.botLimpiar.Name = "botLimpiar";
-            this.botLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.botLimpiar.TabIndex = 23;
-            this.botLimpiar.Text = "Limpiar";
-            this.botLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // botBuscar
-            // 
-            this.botBuscar.Location = new System.Drawing.Point(356, 185);
-            this.botBuscar.Name = "botBuscar";
-            this.botBuscar.Size = new System.Drawing.Size(75, 23);
-            this.botBuscar.TabIndex = 22;
-            this.botBuscar.Text = "Buscar";
-            this.botBuscar.UseVisualStyleBackColor = true;
+            this.botSeleccionar.Location = new System.Drawing.Point(177, 381);
+            this.botSeleccionar.Name = "botSeleccionar";
+            this.botSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.botSeleccionar.TabIndex = 60;
+            this.botSeleccionar.Text = "Seleccionar";
+            this.botSeleccionar.UseVisualStyleBackColor = true;
             // 
             // SeleccionClienteAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 362);
+            this.ClientSize = new System.Drawing.Size(445, 416);
+            this.Controls.Add(this.botSeleccionar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -373,6 +377,8 @@
         private System.Windows.Forms.TextBox textDNI;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button botLimpiar;
+        private System.Windows.Forms.Button botBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
@@ -382,8 +388,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Número;
         private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
-        private System.Windows.Forms.Button botLimpiar;
-        private System.Windows.Forms.Button botBuscar;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
+        private System.Windows.Forms.Button botSeleccionar;
     }
 }
