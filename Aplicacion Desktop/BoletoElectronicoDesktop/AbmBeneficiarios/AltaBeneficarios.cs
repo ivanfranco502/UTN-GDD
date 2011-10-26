@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmBeneficiarios
         public AltaBeneficarios()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
 
         private void AltaBeneficarios_Load(object sender, EventArgs e)

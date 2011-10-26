@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.InactividadTarjetas
         public InactividadTarjetas()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

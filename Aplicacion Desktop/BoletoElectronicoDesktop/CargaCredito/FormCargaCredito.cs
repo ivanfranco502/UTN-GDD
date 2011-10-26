@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.CargaCredito
         public FormCargaCredito()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

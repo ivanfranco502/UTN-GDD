@@ -14,6 +14,12 @@ namespace BoletoElectronicoDesktop.Comunes
         public Calendario()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
         }
 
       

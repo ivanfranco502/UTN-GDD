@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmRol
         public BajaRoles()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
 
         private void label1_Click(object sender, EventArgs e)
