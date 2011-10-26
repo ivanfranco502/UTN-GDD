@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmUsuario
         public ModificacionUsuario()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmClientes
         public ModificacionCliente()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

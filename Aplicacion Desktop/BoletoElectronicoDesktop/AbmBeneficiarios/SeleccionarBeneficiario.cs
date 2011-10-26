@@ -14,6 +14,9 @@ namespace BoletoElectronicoDesktop.AbmBeneficiarios
         public SeleccionarBeneficiario()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
+
+    
     }
 }

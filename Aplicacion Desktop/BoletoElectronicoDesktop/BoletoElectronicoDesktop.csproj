@@ -147,12 +147,6 @@
     <Compile Include="AbmRol\ModificacionRoles.Designer.cs">
       <DependentUpon>ModificacionRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRol\PrincipalRol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbmRol\PrincipalRol.Designer.cs">
-      <DependentUpon>PrincipalRol.cs</DependentUpon>
-    </Compile>
     <Compile Include="AbmRol\SeleccionRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,12 +170,6 @@
     </Compile>
     <Compile Include="AbmTarjetas\ModificacionTarjetas.Designer.cs">
       <DependentUpon>ModificacionTarjetas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AbmTarjetas\PrincipalTarjetas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbmTarjetas\PrincipalTarjetas.Designer.cs">
-      <DependentUpon>PrincipalTarjetas.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmTarjetas\SeleccionClienteAlta.cs">
       <SubType>Form</SubType>
@@ -212,12 +200,6 @@
     </Compile>
     <Compile Include="AbmUsuario\ModificacionUsuario.Designer.cs">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AbmUsuario\PrincipalUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbmUsuario\PrincipalUsuario.Designer.cs">
-      <DependentUpon>PrincipalUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmUsuario\SeleccionUsuario.cs">
       <SubType>Form</SubType>
@@ -326,9 +308,6 @@
     <EmbeddedResource Include="AbmRol\ModificacionRoles.resx">
       <DependentUpon>ModificacionRoles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AbmRol\PrincipalRol.resx">
-      <DependentUpon>PrincipalRol.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\SeleccionRol.resx">
       <DependentUpon>SeleccionRol.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,9 +319,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmTarjetas\ModificacionTarjetas.resx">
       <DependentUpon>ModificacionTarjetas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AbmTarjetas\PrincipalTarjetas.resx">
-      <DependentUpon>PrincipalTarjetas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmTarjetas\SeleccionClienteAlta.resx">
       <DependentUpon>SeleccionClienteAlta.cs</DependentUpon>
@@ -358,9 +334,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmUsuario\ModificacionUsuario.resx">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AbmUsuario\PrincipalUsuario.resx">
-      <DependentUpon>PrincipalUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmUsuario\SeleccionUsuario.resx">
       <DependentUpon>SeleccionUsuario.cs</DependentUpon>
@@ -406,6 +379,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -448,6 +422,15 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\NTVCSUBE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Media\NTVCSUBE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

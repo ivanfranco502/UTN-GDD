@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
         public ModificacionTarjetas()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
 
         private void botLimpiar_Click(object sender, EventArgs e)

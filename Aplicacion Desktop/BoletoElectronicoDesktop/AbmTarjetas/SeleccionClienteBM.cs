@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
         public SeleccionClienteBM()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
         public BajaTarjetas()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

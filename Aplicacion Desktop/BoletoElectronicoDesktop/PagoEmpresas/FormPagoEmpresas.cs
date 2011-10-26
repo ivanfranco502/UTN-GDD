@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
         public FormPagoEmpresas()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

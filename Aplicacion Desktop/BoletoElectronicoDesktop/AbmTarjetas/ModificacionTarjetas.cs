@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmTarjetas
 {
-    public partial class ModificacionTarjetas : Form
+    public partial class ModifTarjetas : Form
     {
-        public ModificacionTarjetas()
+        public ModifTarjetas()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

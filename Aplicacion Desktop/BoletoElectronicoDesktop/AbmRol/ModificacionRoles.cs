@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmRol
         public ModificacionRoles()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

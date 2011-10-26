@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
         public SeleccionClienteAlta()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

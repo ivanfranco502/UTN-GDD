@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.ClientesPremium
         public ClientesPremium()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

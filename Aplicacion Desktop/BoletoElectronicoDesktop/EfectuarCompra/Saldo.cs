@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.Facturación
         public Saldo()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

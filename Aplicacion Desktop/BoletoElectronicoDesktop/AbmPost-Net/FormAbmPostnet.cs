@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmPost_Net
         public FormAbmPostnet()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
     }
 }

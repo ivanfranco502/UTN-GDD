@@ -64,6 +64,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(119, 45);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = ' ';
             this.txtPassword.Size = new System.Drawing.Size(169, 20);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -76,6 +77,7 @@
             this.botLogIn.TabIndex = 4;
             this.botLogIn.Text = "Log In";
             this.botLogIn.UseVisualStyleBackColor = true;
+            this.botLogIn.Click += new System.EventHandler(this.botLogIn_Click);
             // 
             // FormLogin
             // 
@@ -88,7 +90,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
+            this.Text = "NTVC - Log in";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

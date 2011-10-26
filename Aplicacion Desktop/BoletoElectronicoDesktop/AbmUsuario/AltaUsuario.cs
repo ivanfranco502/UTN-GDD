@@ -14,6 +14,7 @@ namespace BoletoElectronicoDesktop.AbmUsuario
         public AltaUsuario()
         {
             InitializeComponent();
+            this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
 
         }
 
