@@ -17,21 +17,9 @@ namespace BoletoElectronicoDesktop
         [STAThread]
         static void Main()
         {
-            string passwordSHA, query;
-            SqlConnection con;
-            SqlCommand com;
-
-            passwordSHA = Encriptar.sha256("w32e");
-            query = "UPDATE NTVC.USUARIO set PASSWORD = '" + passwordSHA + "' where USERNAME = 'admin'";
-            con = Conexion.conectar();
-            com = new SqlCommand(query, con);
-            con.Open();
-            com.ExecuteNonQuery();
-            con.Close();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login.FormLogin());
+            Application.Run(new FormPrincipal());
         }
     }
 

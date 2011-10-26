@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbmBeneficiarios\AltaBeneficarios.cs">
+    <Compile Include="AbmBeneficiarios\AltaBeneficiario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmBeneficiarios\AltaBeneficarios.Designer.cs">
-      <DependentUpon>AltaBeneficarios.cs</DependentUpon>
+    <Compile Include="AbmBeneficiarios\AltaBeneficiario.Designer.cs">
+      <DependentUpon>AltaBeneficiario.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmBeneficiarios\BajaBeneficiario.cs">
       <SubType>Form</SubType>
@@ -110,12 +110,6 @@
     </Compile>
     <Compile Include="AbmClientes\ModificacionCliente.Designer.cs">
       <DependentUpon>ModificacionCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AbmClientes\PrincipalCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbmClientes\PrincipalCliente.Designer.cs">
-      <DependentUpon>PrincipalCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmClientes\SeleccionCliente.cs">
       <SubType>Form</SubType>
@@ -269,8 +263,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AbmBeneficiarios\AltaBeneficarios.resx">
-      <DependentUpon>AltaBeneficarios.cs</DependentUpon>
+    <EmbeddedResource Include="AbmBeneficiarios\AltaBeneficiario.resx">
+      <DependentUpon>AltaBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmBeneficiarios\BajaBeneficiario.resx">
       <DependentUpon>BajaBeneficiario.cs</DependentUpon>
@@ -292,9 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmClientes\ModificacionCliente.resx">
       <DependentUpon>ModificacionCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AbmClientes\PrincipalCliente.resx">
-      <DependentUpon>PrincipalCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmClientes\SeleccionCliente.resx">
       <DependentUpon>SeleccionCliente.cs</DependentUpon>

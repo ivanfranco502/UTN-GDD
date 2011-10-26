@@ -117,60 +117,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="altaBEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Alta...</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="altaBEToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bajaBEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Baja...</value>
+  </data>
+  <data name="bajaBEToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modifBEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Modificación...</value>
+  </data>
+  <data name="modifBEToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="beneficiariosEmpresasToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="altaCtoolStripMenuItem10.Text" xml:space="preserve">
+    <value>Alta...</value>
+  </data>
+  <data name="altaCtoolStripMenuItem10.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bajaCtoolStripMenuItem11.Text" xml:space="preserve">
+    <value>Baja...</value>
+  </data>
+  <data name="bajaCtoolStripMenuItem11.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modifCtoolStripMenuItem12.Text" xml:space="preserve">
+    <value>Modificación...</value>
+  </data>
+  <data name="modifCtoolStripMenuItem12.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clientesToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="altaRtoolStripMenuItem7.Text" xml:space="preserve">
+    <value>Alta...</value>
+  </data>
+  <data name="altaRtoolStripMenuItem7.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bajaRtoolStripMenuItem8.Text" xml:space="preserve">
+    <value>Baja...</value>
+  </data>
+  <data name="bajaRtoolStripMenuItem8.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modifRtoolStripMenuItem9.Text" xml:space="preserve">
+    <value>Modificación...</value>
+  </data>
+  <data name="modifRtoolStripMenuItem9.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rolesToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="altaTtoolStripMenuItem4.Text" xml:space="preserve">
+    <value>Alta...</value>
+  </data>
+  <data name="altaTtoolStripMenuItem4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bajaTtoolStripMenuItem5.Text" xml:space="preserve">
+    <value>Baja...</value>
+  </data>
+  <data name="bajaTtoolStripMenuItem5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modifTtoolStripMenuItem6.Text" xml:space="preserve">
+    <value>Modificación...</value>
+  </data>
+  <data name="modifTtoolStripMenuItem6.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tarjetasToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="altaUtoolStripMenuItem1.Text" xml:space="preserve">
+    <value>Alta...</value>
+  </data>
+  <data name="altaUtoolStripMenuItem1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bajaUtoolStripMenuItem2.Text" xml:space="preserve">
+    <value>Baja...</value>
+  </data>
+  <data name="bajaUtoolStripMenuItem2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modifUtoolStripMenuItem3.Text" xml:space="preserve">
+    <value>Modificación...</value>
+  </data>
+  <data name="modifUtoolStripMenuItem3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="usuariosToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="adminToolStripMenuItem.Text" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="adminToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>606, 24</value>
-  </data>
-  <data name="altaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Alta...</value>
-  </data>
-  <data name="bajaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baja...</value>
-  </data>
-  <data name="modificaciónToolStripMenuItem.Text" xml:space="preserve">
-    <value>Modificación...</value>
-  </data>
-  <data name="toolStripMenuItem10.Text" xml:space="preserve">
-    <value>Alta...</value>
-  </data>
-  <data name="toolStripMenuItem11.Text" xml:space="preserve">
-    <value>Baja...</value>
-  </data>
-  <data name="toolStripMenuItem12.Text" xml:space="preserve">
-    <value>Modificación...</value>
-  </data>
-  <data name="toolStripMenuItem7.Text" xml:space="preserve">
-    <value>Alta...</value>
-  </data>
-  <data name="toolStripMenuItem8.Text" xml:space="preserve">
-    <value>Baja...</value>
-  </data>
-  <data name="toolStripMenuItem9.Text" xml:space="preserve">
-    <value>Modificación...</value>
-  </data>
-  <data name="toolStripMenuItem4.Text" xml:space="preserve">
-    <value>Alta...</value>
-  </data>
-  <data name="toolStripMenuItem5.Text" xml:space="preserve">
-    <value>Baja...</value>
-  </data>
-  <data name="toolStripMenuItem6.Text" xml:space="preserve">
-    <value>Modificación...</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Alta...</value>
-  </data>
-  <data name="toolStripMenuItem2.Text" xml:space="preserve">
-    <value>Baja...</value>
-  </data>
-  <data name="toolStripMenuItem3.Text" xml:space="preserve">
-    <value>Modificación...</value>
-  </data>
   <data name="cargarCréditoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
   </data>
   <data name="cargarCréditoToolStripMenuItem.Text" xml:space="preserve">
     <value>Cargar crédito...</value>
+  </data>
+  <data name="cargarCréditoToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="efectuarCompraToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
@@ -178,11 +245,35 @@
   <data name="efectuarCompraToolStripMenuItem.Text" xml:space="preserve">
     <value>Efectuar compra...</value>
   </data>
+  <data name="efectuarCompraToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="pagarAEmpresasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
   </data>
   <data name="pagarAEmpresasToolStripMenuItem.Text" xml:space="preserve">
     <value>Pagar a empresas...</value>
+  </data>
+  <data name="pagarAEmpresasToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="operacionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Operación</value>
+  </data>
+  <data name="operacionToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="inactividadDeTarjetasToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clientesPremiumToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="controlToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 24</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -784,9 +875,6 @@
 </value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>616, 459</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>616, 459</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">

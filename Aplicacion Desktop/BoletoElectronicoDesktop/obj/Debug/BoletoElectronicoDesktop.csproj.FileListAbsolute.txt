@@ -16,7 +16,6 @@ C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronico
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.Properties.Resources.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.FormPrincipal.es-AR.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.csproj.GenerateResource.Cache
-C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.AltaBeneficarios.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.BajaBeneficiario.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.ModificacionBeneficiario.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.SeleccionarBeneficiario.resources
@@ -24,7 +23,6 @@ C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronico
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmClientes.AltaClientes.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmClientes.BajaCliente.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmClientes.ModificacionCliente.resources
-C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmClientes.PrincipalCliente.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmClientes.SeleccionCliente.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.CargaCredito.FormCargaCredito.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.ClientesPremium.ClientesPremium.resources
@@ -41,3 +39,4 @@ C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronico
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\es-AR\BoletoElectronicoDesktop.resources.dll
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.exe
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.pdb
+C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.AltaBeneficiario.resources

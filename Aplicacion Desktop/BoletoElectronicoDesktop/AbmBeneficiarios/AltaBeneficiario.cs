@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
-    public partial class AltaBeneficarios : Form
+    public partial class AltaBeneficiario : Form
     {
-        public AltaBeneficarios()
+        public AltaBeneficiario()
         {
             InitializeComponent();
             this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
