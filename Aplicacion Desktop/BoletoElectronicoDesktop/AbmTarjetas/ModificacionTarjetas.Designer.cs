@@ -1,6 +1,6 @@
 ﻿namespace BoletoElectronicoDesktop.AbmTarjetas
 {
-    partial class ModifTarjetas
+    partial class ModificacionTarjetas
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -119,7 +119,7 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Numero de Tarjeta:";
             // 
-            // ModifTarjetas
+            // ModificacionTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,8 +133,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ModifTarjetas";
-            this.Text = "ModifTarjetas";
+            this.Name = "ModificacionTarjetas";
+            this.Text = "Tarjeta - Modificación";
             this.ResumeLayout(false);
             this.PerformLayout();
 

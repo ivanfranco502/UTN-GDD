@@ -1,6 +1,6 @@
 ﻿namespace BoletoElectronicoDesktop.AbmTarjetas
 {
-    partial class ModificacionTarjetas
+    partial class AltaTarjetas
     {
         /// <summary>
         /// Required designer variable.
@@ -127,7 +127,7 @@
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
             // 
-            // ModificacionTarjetas
+            // AltaTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ModificacionTarjetas";
+            this.Name = "AltaTarjetas";
             this.Text = "Tarjeta - Alta";
             this.ResumeLayout(false);
             this.PerformLayout();
