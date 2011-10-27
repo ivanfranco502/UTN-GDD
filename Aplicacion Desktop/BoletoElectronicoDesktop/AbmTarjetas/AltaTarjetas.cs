@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace BoletoElectronicoDesktop.AbmTarjetas
 {
-    public partial class ModificacionTarjetas : Form
+    public partial class AltaTarjetas : Form
     {
-        public ModificacionTarjetas()
+        public AltaTarjetas()
         {
             InitializeComponent();
             this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;

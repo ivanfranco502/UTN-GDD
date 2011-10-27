@@ -41,40 +41,36 @@ namespace BoletoElectronicoDesktop
                         this.adminToolStripMenuItem.Visible = true;
                         this.beneficiariosEmpresasToolStripMenuItem.Visible = true;
                         this.altaBEToolStripMenuItem.Visible = true;
-                        this.bajaBEToolStripMenuItem.Visible = true;
-                        this.modifBEToolStripMenuItem.Visible = true;
+                        this.bajaOModifBEToolStripMenuItem.Visible = true;
                         break;
                     case "ABM de Cliente":
                         this.adminToolStripMenuItem.Visible = true;
                         this.clientesToolStripMenuItem.Visible = true;
-                        this.altaCtoolStripMenuItem10.Visible = true;
-                        this.bajaCtoolStripMenuItem11.Visible = true;
-                        this.modifCtoolStripMenuItem12.Visible = true;
+                        this.altaCtoolStripMenuItem.Visible = true;
+                        this.bajaOModifCtoolStripMenuItem.Visible = true;
                         break;
                     case "ABM de Rol":
                         this.adminToolStripMenuItem.Visible = true;
                         this.rolesToolStripMenuItem.Visible = true;
-                        this.altaRtoolStripMenuItem7.Visible = true;
-                        this.bajaRtoolStripMenuItem8.Visible = true;
-                        this.modifRtoolStripMenuItem9.Visible = true;
+                        this.altaRtoolStripMenuItem.Visible = true;
+                        this.bajaRtoolStripMenuItem.Visible = true;
+                        this.modifRtoolStripMenuItem.Visible = true;
                         break;
                     case "ABM de Tarjetas":
                         this.adminToolStripMenuItem.Visible = true;
                         this.tarjetasToolStripMenuItem.Visible = true;
-                        this.altaTtoolStripMenuItem4.Visible = true;
-                        this.bajaTtoolStripMenuItem5.Visible = true;
-                        this.modifTtoolStripMenuItem6.Visible = true;
+                        this.altaTtoolStripMenuItem.Visible = true;
+                        this.bajaOModifTtoolStripMenuItem.Visible = true;
                         break;
                     case "ABM de Usuario":
                         this.adminToolStripMenuItem.Visible = true;
                         this.usuariosToolStripMenuItem.Visible = true;
-                        this.altaUtoolStripMenuItem1.Visible = true;
-                        this.bajaUtoolStripMenuItem2.Visible = true;
-                        this.modifUtoolStripMenuItem3.Visible = true;
+                        this.altaUtoolStripMenuItem.Visible = true;
+                        this.bajaOModifUtoolStripMenuItem.Visible = true;
                         break;
                     case "Carga de credito":
                         this.operacionToolStripMenuItem.Visible = true;
-                        this.cargarCréditoToolStripMenuItem.Visible = true;
+                        this.cargarCreditoToolStripMenuItem.Visible = true;
                         break;
                     case "Clientes Premium":
                         this.controlToolStripMenuItem.Visible = true;
@@ -102,58 +98,101 @@ namespace BoletoElectronicoDesktop
            
         }
 
-        /*private void altaBEToolStripMenuItem_Click(object sender, EventArgs e)
+        private void altaBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoletoElectronicoDesktop.AbmBeneficiarios.AltaBeneficiario form = new AbmBeneficiarios.AltaBeneficiario();
             form.ShowDialog(this);
         }
 
-        private void bajaBEToolStripMenuItem_Click(object sender, EventArgs e)
+        private void bajaOModifBEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BoletoElectronicoDesktop.AbmBeneficiarios.BajaBeneficiario form = new AbmBeneficiarios.BajaBeneficiario();
+            BoletoElectronicoDesktop.AbmBeneficiarios.SeleccionarBeneficiario form = new AbmBeneficiarios.SeleccionarBeneficiario();
             form.ShowDialog(this);
         }
 
-        private void modifBEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BoletoElectronicoDesktop.AbmBeneficiarios.ModificacionBeneficiario form = new AbmBeneficiarios.ModificacionBeneficiario();
-            form.ShowDialog(this);
-        }
-
-        private void altaCtoolStripMenuItem10_Click(object sender, EventArgs e)
+        private void altaCtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoletoElectronicoDesktop.AbmClientes.AltaClientes form = new AbmClientes.AltaClientes();
             form.ShowDialog(this);
         }
 
-        private void bajaCtoolStripMenuItem11_Click(object sender, EventArgs e)
+        private void bajaOModifCtoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BoletoElectronicoDesktop.AbmClientes.BajaCliente form = new AbmClientes.BajaCliente();
+            BoletoElectronicoDesktop.AbmClientes.SeleccionCliente form = new AbmClientes.SeleccionCliente();
             form.ShowDialog(this);
         }
         
-        private void modifCtoolStripMenuItem12_Click(object sender, EventArgs e)
-        {
-            BoletoElectronicoDesktop.AbmClientes.ModificacionCliente form = new AbmClientes.ModificacionCliente();
-            form.ShowDialog(this);
-        }
-        
-        private void altaRtoolStripMenuItem7_Click(object sender, EventArgs e)
+ 
+        private void altaRtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoletoElectronicoDesktop.AbmRol.AltaRoles form = new AbmRol.AltaRoles();
             form.ShowDialog(this);
         }
 
-        private void bajaRtoolStripMenuItem8_Click(object sender, EventArgs e)
+        private void bajaRtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoletoElectronicoDesktop.AbmRol.BajaRoles form = new AbmRol.BajaRoles();
             form.ShowDialog(this);
         }
 
-        private void modifRtoolStripMenuItem9_Click(object sender, EventArgs e)
+        private void modifRtoolStripMenuItem_Click(object sender, EventArgs e)
         {
             BoletoElectronicoDesktop.AbmRol.ModificacionRoles form = new AbmRol.ModificacionRoles();
             form.ShowDialog(this);
-        }*/
+        }
+        
+        private void altaTtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.AbmTarjetas.AltaTarjetas form = new AbmTarjetas.AltaTarjetas();
+            form.ShowDialog(this);
+        }
+
+        private void bajaOModifTtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.AbmTarjetas.SeleccionClienteBM form = new AbmTarjetas.SeleccionClienteBM();
+            form.ShowDialog(this);
+        }
+        private void altaUtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.AbmUsuario.AltaUsuario form = new AbmUsuario.AltaUsuario();
+            form.ShowDialog(this);
+        }
+
+        private void bajaOModifUtoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.AbmUsuario.SeleccionUsuario form = new AbmUsuario.SeleccionUsuario();
+            form.ShowDialog(this);
+        }
+
+        private void cargarCreditoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.CargaCredito.FormCargaCredito form = new BoletoElectronicoDesktop.CargaCredito.FormCargaCredito();
+            form.ShowDialog(this);       
+        }
+
+        private void clientesPremiumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.ClientesPremium.ClientesPremium form = new BoletoElectronicoDesktop.ClientesPremium.ClientesPremium();
+            form.ShowDialog(this);
+        }
+        
+        private void efectuarCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.Facturación.Facturacion form = new BoletoElectronicoDesktop.Facturación.Facturacion();
+            form.ShowDialog(this);
+        }
+        
+        private void inactividadDeTarjetasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.InactividadTarjetas.InactividadTarjetas form = new BoletoElectronicoDesktop.InactividadTarjetas.InactividadTarjetas();
+            form.ShowDialog(this);
+        }
+        
+        private void pagarAEmpresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BoletoElectronicoDesktop.PagoEmpresas.FormPagoEmpresas form = new BoletoElectronicoDesktop.PagoEmpresas.FormPagoEmpresas();
+            form.ShowDialog(this);
+        }
+        
     }
 }
