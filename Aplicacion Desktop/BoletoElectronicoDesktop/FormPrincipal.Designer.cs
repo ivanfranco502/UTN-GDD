@@ -84,6 +84,8 @@
             this.usuariosToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.adminToolStripMenuItem.Visible = false;
+            this.adminToolStripMenuItem.Text = "Administración";
             // 
             // beneficiariosEmpresasToolStripMenuItem
             // 
@@ -96,6 +98,8 @@
             this.bajaOModifBEToolStripMenuItem});
             this.beneficiariosEmpresasToolStripMenuItem.Name = "beneficiariosEmpresasToolStripMenuItem";
             this.beneficiariosEmpresasToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.beneficiariosEmpresasToolStripMenuItem.Visible = false;
+            this.beneficiariosEmpresasToolStripMenuItem.Text = "Beneficiarios/Empresas";
             // 
             // altaBEToolStripMenuItem
             // 
@@ -106,6 +110,8 @@
             this.altaBEToolStripMenuItem.Name = "altaBEToolStripMenuItem";
             this.altaBEToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.altaBEToolStripMenuItem.Click += new System.EventHandler(this.altaBEToolStripMenuItem_Click);
+            this.altaBEToolStripMenuItem.Visible = false;
+            this.altaBEToolStripMenuItem.Text = "Alta...";
             // 
             // bajaOModifBEToolStripMenuItem
             // 
@@ -116,6 +122,8 @@
             this.bajaOModifBEToolStripMenuItem.Name = "bajaOModifBEToolStripMenuItem";
             this.bajaOModifBEToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.bajaOModifBEToolStripMenuItem.Click += new System.EventHandler(this.bajaOModifBEToolStripMenuItem_Click);
+            this.bajaOModifBEToolStripMenuItem.Visible = false;
+            this.bajaOModifBEToolStripMenuItem.Text = "Baja o modificación...";
             // 
             // clientesToolStripMenuItem
             // 
@@ -128,6 +136,8 @@
             this.bajaOModifCtoolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.clientesToolStripMenuItem.Visible = false;
+            this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // altaCtoolStripMenuItem
             // 
@@ -138,6 +148,8 @@
             this.altaCtoolStripMenuItem.Name = "altaCtoolStripMenuItem";
             this.altaCtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.altaCtoolStripMenuItem.Click += new System.EventHandler(this.altaCtoolStripMenuItem_Click);
+            this.altaCtoolStripMenuItem.Visible = false;
+            this.altaCtoolStripMenuItem.Text = "Alta...";
             // 
             // bajaOModifCtoolStripMenuItem
             // 
@@ -148,6 +160,8 @@
             this.bajaOModifCtoolStripMenuItem.Name = "bajaOModifCtoolStripMenuItem";
             this.bajaOModifCtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.bajaOModifCtoolStripMenuItem.Click += new System.EventHandler(this.bajaOModifCtoolStripMenuItem_Click);
+            this.bajaOModifCtoolStripMenuItem.Visible = false;
+            this.bajaOModifCtoolStripMenuItem.Text = "Baja o modificación...";
             // 
             // rolesToolStripMenuItem
             // 
@@ -161,6 +175,8 @@
             this.modifRtoolStripMenuItem});
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
             this.rolesToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.rolesToolStripMenuItem.Visible = false;
+            this.rolesToolStripMenuItem.Text = "Roles";
             // 
             // altaRtoolStripMenuItem
             // 
@@ -171,6 +187,8 @@
             this.altaRtoolStripMenuItem.Name = "altaRtoolStripMenuItem";
             this.altaRtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.altaRtoolStripMenuItem.Click += new System.EventHandler(this.altaRtoolStripMenuItem_Click);
+            this.altaRtoolStripMenuItem.Visible = false;
+            this.altaRtoolStripMenuItem.Text = "Alta...";
             // 
             // bajaRtoolStripMenuItem
             // 
@@ -181,6 +199,8 @@
             this.bajaRtoolStripMenuItem.Name = "bajaRtoolStripMenuItem";
             this.bajaRtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.bajaRtoolStripMenuItem.Click += new System.EventHandler(this.bajaRtoolStripMenuItem_Click);
+            this.bajaRtoolStripMenuItem.Visible = false;
+            this.bajaRtoolStripMenuItem.Text = "Baja...";
             // 
             // modifRtoolStripMenuItem
             // 
@@ -191,6 +211,8 @@
             this.modifRtoolStripMenuItem.Name = "modifRtoolStripMenuItem";
             this.modifRtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.modifRtoolStripMenuItem.Click += new System.EventHandler(this.modifRtoolStripMenuItem_Click);
+            this.modifRtoolStripMenuItem.Visible = false;
+            this.modifRtoolStripMenuItem.Text = "Modificación...";
             // 
             // tarjetasToolStripMenuItem
             // 
@@ -203,6 +225,8 @@
             this.bajaOModifTtoolStripMenuItem});
             this.tarjetasToolStripMenuItem.Name = "tarjetasToolStripMenuItem";
             this.tarjetasToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.tarjetasToolStripMenuItem.Visible = false;
+            this.tarjetasToolStripMenuItem.Text = "Tarjetas";
             // 
             // altaTtoolStripMenuItem
             // 
@@ -213,6 +237,8 @@
             this.altaTtoolStripMenuItem.Name = "altaTtoolStripMenuItem";
             this.altaTtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.altaTtoolStripMenuItem.Click += new System.EventHandler(this.altaTtoolStripMenuItem_Click);
+            this.altaTtoolStripMenuItem.Visible = false;
+            this.altaTtoolStripMenuItem.Text = "Alta...";
             // 
             // bajaOModifTtoolStripMenuItem
             // 
@@ -223,6 +249,8 @@
             this.bajaOModifTtoolStripMenuItem.Name = "bajaOModifTtoolStripMenuItem";
             this.bajaOModifTtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.bajaOModifTtoolStripMenuItem.Click += new System.EventHandler(this.bajaOModifTtoolStripMenuItem_Click);
+            this.bajaOModifTtoolStripMenuItem.Visible = false;
+            this.bajaOModifTtoolStripMenuItem.Text = "Baja o modificación...";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -235,6 +263,8 @@
             this.bajaOModifUtoolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.usuariosToolStripMenuItem.Visible = false;
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // altaUtoolStripMenuItem
             // 
@@ -245,6 +275,8 @@
             this.altaUtoolStripMenuItem.Name = "altaUtoolStripMenuItem";
             this.altaUtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.altaUtoolStripMenuItem.Click += new System.EventHandler(this.altaUtoolStripMenuItem_Click);
+            this.altaUtoolStripMenuItem.Visible = false;
+            this.altaUtoolStripMenuItem.Text = "Alta...";
             // 
             // bajaOModifUtoolStripMenuItem
             // 
@@ -255,6 +287,8 @@
             this.bajaOModifUtoolStripMenuItem.Name = "bajaOModifUtoolStripMenuItem";
             this.bajaOModifUtoolStripMenuItem.ShortcutKeyDisplayString = null;
             this.bajaOModifUtoolStripMenuItem.Click += new System.EventHandler(this.bajaOModifUtoolStripMenuItem_Click);
+            this.bajaOModifUtoolStripMenuItem.Visible = false;
+            this.bajaOModifUtoolStripMenuItem.Text = "Baja o modificación...";
             // 
             // operacionToolStripMenuItem
             // 
@@ -268,6 +302,8 @@
             this.pagarAEmpresasToolStripMenuItem});
             this.operacionToolStripMenuItem.Name = "operacionToolStripMenuItem";
             this.operacionToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.operacionToolStripMenuItem.Visible = false;
+            this.operacionToolStripMenuItem.Text = "Operación";
             // 
             // cargarCreditoToolStripMenuItem
             // 
@@ -278,6 +314,8 @@
             this.cargarCreditoToolStripMenuItem.Name = "cargarCreditoToolStripMenuItem";
             this.cargarCreditoToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.cargarCreditoToolStripMenuItem.Click += new System.EventHandler(this.cargarCreditoToolStripMenuItem_Click);
+            this.cargarCreditoToolStripMenuItem.Visible = false;
+            this.cargarCreditoToolStripMenuItem.Text = "Cargar crédito...";
             // 
             // efectuarCompraToolStripMenuItem
             // 
@@ -288,6 +326,8 @@
             this.efectuarCompraToolStripMenuItem.Name = "efectuarCompraToolStripMenuItem";
             this.efectuarCompraToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.efectuarCompraToolStripMenuItem.Click += new System.EventHandler(this.efectuarCompraToolStripMenuItem_Click);
+            this.efectuarCompraToolStripMenuItem.Visible = false;
+            this.efectuarCompraToolStripMenuItem.Text = "Efectuar compra...";
             // 
             // pagarAEmpresasToolStripMenuItem
             // 
@@ -298,6 +338,8 @@
             this.pagarAEmpresasToolStripMenuItem.Name = "pagarAEmpresasToolStripMenuItem";
             this.pagarAEmpresasToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.pagarAEmpresasToolStripMenuItem.Click += new System.EventHandler(this.pagarAEmpresasToolStripMenuItem_Click);
+            this.pagarAEmpresasToolStripMenuItem.Visible = false;
+            this.pagarAEmpresasToolStripMenuItem.Text = "Pagar a empresas...";
             // 
             // controlToolStripMenuItem
             // 
@@ -310,6 +352,8 @@
             this.clientesPremiumToolStripMenuItem});
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
             this.controlToolStripMenuItem.ShortcutKeyDisplayString = null;
+            this.controlToolStripMenuItem.Visible = false;
+            this.controlToolStripMenuItem.Text = "Control";
             // 
             // inactividadDeTarjetasToolStripMenuItem
             // 
@@ -320,6 +364,8 @@
             this.inactividadDeTarjetasToolStripMenuItem.Name = "inactividadDeTarjetasToolStripMenuItem";
             this.inactividadDeTarjetasToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.inactividadDeTarjetasToolStripMenuItem.Click += new System.EventHandler(this.inactividadDeTarjetasToolStripMenuItem_Click);
+            this.inactividadDeTarjetasToolStripMenuItem.Visible = false;
+            this.inactividadDeTarjetasToolStripMenuItem.Text = "Inactividad de tarjetas...";
             // 
             // clientesPremiumToolStripMenuItem
             // 
@@ -330,6 +376,8 @@
             this.clientesPremiumToolStripMenuItem.Name = "clientesPremiumToolStripMenuItem";
             this.clientesPremiumToolStripMenuItem.ShortcutKeyDisplayString = null;
             this.clientesPremiumToolStripMenuItem.Click += new System.EventHandler(this.clientesPremiumToolStripMenuItem_Click);
+            this.clientesPremiumToolStripMenuItem.Visible = false;
+            this.clientesPremiumToolStripMenuItem.Text = "Clientes Premium...";
             // 
             // FormPrincipal
             // 
@@ -349,6 +397,7 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 
         }
 
