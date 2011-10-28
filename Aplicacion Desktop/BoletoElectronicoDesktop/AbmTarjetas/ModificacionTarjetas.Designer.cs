@@ -59,6 +59,7 @@
             this.botModificar.TabIndex = 27;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // botSeleccionarCliente
             // 
@@ -68,6 +69,7 @@
             this.botSeleccionarCliente.TabIndex = 26;
             this.botSeleccionarCliente.Text = "Seleccionar";
             this.botSeleccionarCliente.UseVisualStyleBackColor = true;
+            this.botSeleccionarCliente.Click += new System.EventHandler(this.botSeleccionarCliente_Click);
             // 
             // textCliente
             // 
@@ -151,5 +153,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+
+        public string nro_tarjeta_viejo = "";
     }
 }

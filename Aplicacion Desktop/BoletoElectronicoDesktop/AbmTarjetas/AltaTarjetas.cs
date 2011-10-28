@@ -28,18 +28,19 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
         private void botGuardar_Click(object sender, EventArgs e)
         {
             
-            if (textNumeroTarjeta.Text == "" || textFechaAlta.Text == "" || textCliente.Text == "")
+            if (FuncionesUtiles.estanVacios(new List<TextBox>{textNumeroTarjeta, textFechaAlta, textCliente}))
             {
+                
                 string mensaje = "Debe completar los siguientes campos:";
-                if (textNumeroTarjeta.Text == "")
+                if (FuncionesUtiles.estaVacio(textNumeroTarjeta))
                 {
                     mensaje += "\n-Número de tarjeta";
                 }
-                if (textFechaAlta.Text == "")
+                if (FuncionesUtiles.estaVacio(textFechaAlta))
                 {
                     mensaje += "\n-Fecha de alta";
                 }
-                if (textCliente.Text == "")
+                if (FuncionesUtiles.estaVacio(textCliente))
                 {
                     mensaje += "\n-Cliente";
                 }
@@ -47,8 +48,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
             }
             else
             {
-                int nro_tarjeta;
-                if(int.TryParse(this.textNumeroTarjeta.Text,out nro_tarjeta))
+                if(FuncionesUtiles.esNumerico(this.textNumeroTarjeta))
                 {
                     //el valor de numero de tarjeta es numerico
                     SqlConnection con = Conexion.conectar();

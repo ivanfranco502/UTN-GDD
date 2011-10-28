@@ -45,6 +45,7 @@
             this.botEliminar.TabIndex = 18;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
             // 
             // textCliente
             // 
@@ -125,5 +126,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+
+        public string nro_tarjeta_viejo = "";
+
     }
 }
