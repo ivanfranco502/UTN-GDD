@@ -32,6 +32,7 @@ namespace BoletoElectronicoDesktop
 
         public static SqlConnection conectar()
         {
+            //asegura una conexión única a la base de datos
             if (conexion == null)
             {
                 conexion = new SqlConnection(connectionString);
@@ -42,6 +43,7 @@ namespace BoletoElectronicoDesktop
 
     public class Encriptar
     {
+        //recibe la contraseña y la devuelve encriptada
         public static string sha256(string entrada)
         {
             SHA256 shaM = new SHA256Managed();
@@ -53,6 +55,7 @@ namespace BoletoElectronicoDesktop
 
     public class FuncionesUtiles
     {
+        //dada una consulta y un data grid view, la ejecuta y rellena el mismo
         public static void llenarDataGridView(string query, DataGridView dgv)
         {
             SqlConnection con = Conexion.conectar();
@@ -67,6 +70,77 @@ namespace BoletoElectronicoDesktop
             dgv.DataSource = dt;
             con.Close();
         }
+
+        //averigua si el textbox contiene un valor numerico
+        public static bool esNumerico(TextBox text)
+        {
+            int salida;
+            if(int.TryParse(text.Text, out salida))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
+        //analiza si los text boxes son numericos
+        public static bool sonNumericos(List<TextBox> boxes)
+        {
+            bool resultado = false;
+            foreach (TextBox box in boxes)
+            {
+                if (esNumerico(box))
+                {
+                    resultado = true;
+                }
+            }
+            return resultado;
+        }
+
+        public static bool sonNumericosOVacios(List<TextBox> boxes)
+        {
+            bool resultado = true;
+            foreach (TextBox box in boxes)
+            {
+                if (!esNumerico(box) && !estaVacio(box))
+                {
+                    resultado = true;
+                }
+            }
+            return resultado;
+        }
+
+
+
+        //averigua si el textbox esta vacio o hay contenido
+        public static bool estaVacio(TextBox text)
+        {
+            if (text.Text == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //dada una lista de text box, devuelve si al menos uno esta vacio
+        public static bool estanVacios(List<TextBox> boxes)
+        {
+            bool resultado = false;
+            foreach (TextBox box in boxes)
+            {
+                if (box.Text == "")
+                {
+                    resultado = true;
+                }
+            }
+            return resultado;
+        }
+
     }
 
 }

@@ -19,6 +19,7 @@ namespace BoletoElectronicoDesktop.Comunes
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
+            //guarda la fecha en el formato sql aaaammdd    
             string anio = monthCalendar1.SelectionRange.Start.Date.Year.ToString();
             string mes = monthCalendar1.SelectionRange.Start.Date.Month.ToString();
             string dia = monthCalendar1.SelectionRange.Start.Date.Day.ToString();
@@ -38,6 +39,7 @@ namespace BoletoElectronicoDesktop.Comunes
         }
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
+            //guarda la fecha en el formato sql aaaammdd
             string anio = monthCalendar1.SelectionRange.Start.Date.Year.ToString();
             string mes = monthCalendar1.SelectionRange.Start.Date.Month.ToString();
             string dia = monthCalendar1.SelectionRange.Start.Date.Day.ToString();
