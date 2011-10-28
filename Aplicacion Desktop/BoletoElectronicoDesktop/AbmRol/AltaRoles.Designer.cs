@@ -37,6 +37,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "ABM de Tarjetas",
@@ -78,6 +79,7 @@
             this.botGuardar.TabIndex = 12;
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // botLimpiar
             // 
@@ -87,6 +89,7 @@
             this.botLimpiar.TabIndex = 11;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // AltaRoles
             // 

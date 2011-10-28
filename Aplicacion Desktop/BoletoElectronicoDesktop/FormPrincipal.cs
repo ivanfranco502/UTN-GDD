@@ -139,7 +139,7 @@ namespace BoletoElectronicoDesktop
 
         private void modifRtoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BoletoElectronicoDesktop.AbmRol.ModificacionRoles form = new AbmRol.ModificacionRoles();
+            BoletoElectronicoDesktop.AbmRol.SeleccionRol form = new AbmRol.SeleccionRol();
             form.ShowDialog(this);
         }
         
