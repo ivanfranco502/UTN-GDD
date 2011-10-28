@@ -90,6 +90,8 @@ namespace BoletoElectronicoDesktop
                         break;
                 }
             }
+            reader.Close();
+            con.Close();
 
         }
 

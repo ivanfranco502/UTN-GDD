@@ -90,6 +90,7 @@
             this.botSeleccionarFecha.TabIndex = 5;
             this.botSeleccionarFecha.Text = "Seleccionar";
             this.botSeleccionarFecha.UseVisualStyleBackColor = true;
+            this.botSeleccionarFecha.Click += new System.EventHandler(this.botSeleccionarFecha_Click);
             // 
             // textCliente
             // 
@@ -107,6 +108,7 @@
             this.botSeleccionarCliente.TabIndex = 7;
             this.botSeleccionarCliente.Text = "Seleccionar";
             this.botSeleccionarCliente.UseVisualStyleBackColor = true;
+            this.botSeleccionarCliente.Click += new System.EventHandler(this.botSeleccionarCliente_Click);
             // 
             // botLimpiar
             // 
@@ -126,6 +128,7 @@
             this.botGuardar.TabIndex = 10;
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // AltaTarjetas
             // 

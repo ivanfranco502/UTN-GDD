@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace BoletoElectronicoDesktop
 {
@@ -49,4 +50,23 @@ namespace BoletoElectronicoDesktop
             return BitConverter.ToString(bytesEncriptados);
         }
     }
+
+    public class FuncionesUtiles
+    {
+        public static void llenarDataGridView(string query, DataGridView dgv)
+        {
+            SqlConnection con = Conexion.conectar();
+            if (con.State.Equals(System.Data.ConnectionState.Closed))
+            {
+                con.Open();
+            }
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dgv.DataSource = dt;
+            con.Close();
+        }
+    }
+
 }
