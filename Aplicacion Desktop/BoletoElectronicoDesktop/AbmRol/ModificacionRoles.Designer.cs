@@ -43,6 +43,7 @@
             this.botModificar.TabIndex = 16;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // textNombre
             // 
@@ -62,6 +63,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "ABM de Tarjetas",
@@ -115,5 +117,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.CheckBox chkHabilitado;
+
+        public string cod_rol_modificar = "";
+        public string nombre_rol_viejo = "";
     }
 }

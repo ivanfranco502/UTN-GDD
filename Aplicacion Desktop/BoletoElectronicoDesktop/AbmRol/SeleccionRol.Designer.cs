@@ -41,6 +41,7 @@
             this.botModificar.TabIndex = 5;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // label1
             // 
@@ -68,6 +69,7 @@
             this.Controls.Add(this.botModificar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.MaximizeBox = false;
             this.Name = "SeleccionRol";
             this.Text = "Rol - Selección";
             this.ResumeLayout(false);
