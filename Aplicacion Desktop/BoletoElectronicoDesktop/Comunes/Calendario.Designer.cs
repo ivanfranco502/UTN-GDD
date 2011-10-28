@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.botSeleccionar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -36,13 +37,25 @@
             this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            // 
+            // botSeleccionar
+            // 
+            this.botSeleccionar.Location = new System.Drawing.Point(0, 159);
+            this.botSeleccionar.Name = "botSeleccionar";
+            this.botSeleccionar.Size = new System.Drawing.Size(227, 26);
+            this.botSeleccionar.TabIndex = 1;
+            this.botSeleccionar.Text = "Seleccionar";
+            this.botSeleccionar.UseVisualStyleBackColor = true;
+            this.botSeleccionar.Click += new System.EventHandler(this.botSeleccionar_Click);
             // 
             // Calendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(227, 163);
+            this.ClientSize = new System.Drawing.Size(227, 184);
+            this.Controls.Add(this.botSeleccionar);
             this.Controls.Add(this.monthCalendar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -55,6 +68,8 @@
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        public string fecha = "";
+        private System.Windows.Forms.Button botSeleccionar;
 
     }
 }
