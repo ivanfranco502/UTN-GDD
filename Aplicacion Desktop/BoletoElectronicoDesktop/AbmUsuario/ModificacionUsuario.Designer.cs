@@ -42,8 +42,10 @@
             // 
             this.textPassword.Location = new System.Drawing.Point(77, 38);
             this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = ' ';
             this.textPassword.Size = new System.Drawing.Size(144, 20);
             this.textPassword.TabIndex = 12;
+            this.textPassword.UseSystemPasswordChar = true;
             // 
             // textUsername
             // 
@@ -82,6 +84,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(15, 79);
             this.checkedListBox1.Name = "checkedListBox1";
@@ -96,6 +99,7 @@
             this.botModificar.TabIndex = 14;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // chkHabilitado
             // 
@@ -139,5 +143,8 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button botModificar;
         private System.Windows.Forms.CheckBox chkHabilitado;
+
+        public string username_ = "";
+        public string cod_usuario_ = "";
     }
 }

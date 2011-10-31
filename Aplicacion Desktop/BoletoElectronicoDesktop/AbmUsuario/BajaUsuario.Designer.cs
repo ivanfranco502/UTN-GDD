@@ -43,6 +43,7 @@
             this.botEliminar.TabIndex = 11;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
             // 
             // textUsername
             // 
@@ -103,5 +104,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+
+        public string username_ = "";
+        public string cod_usuario_ = "";
     }
 }

@@ -28,7 +28,7 @@ namespace BoletoElectronicoDesktop
             SqlConnection con = Conexion.conectar();
             String comText = "select distinct(F.descripcion) " +
                              "from ntvc.usuario_rol ur, ntvc.rol r, ntvc.rol_funcionalidad rf, ntvc.funcionalidad f " +
-                             "where ur.cod_usuario = @cu and ur.cod_rol = r.cod_rol and r.cod_rol = rf.cod_rol and rf.cod_funcionalidad = f.cod_funcionalidad";
+                             "where ur.cod_usuario = @cu and ur.cod_rol = r.cod_rol and r.cod_rol = rf.cod_rol and rf.cod_funcionalidad = f.cod_funcionalidad and r.habilitacion = 1";
             SqlCommand com = new SqlCommand(comText, con);
             com.Parameters.AddWithValue("@cu", cod_usuario);
             con.Open();
