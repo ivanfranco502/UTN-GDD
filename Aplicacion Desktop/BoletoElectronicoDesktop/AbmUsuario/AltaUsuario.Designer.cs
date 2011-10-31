@@ -40,6 +40,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(12, 73);
             this.checkedListBox1.Name = "checkedListBox1";
@@ -86,6 +87,7 @@
             this.textPassword.Name = "textPassword";
             this.textPassword.Size = new System.Drawing.Size(144, 20);
             this.textPassword.TabIndex = 5;
+            this.textPassword.UseSystemPasswordChar = true;
             // 
             // botLimpiar
             // 
@@ -95,6 +97,7 @@
             this.botLimpiar.TabIndex = 6;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // botGuardar
             // 
@@ -104,6 +107,7 @@
             this.botGuardar.TabIndex = 7;
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // AltaUsuario
             // 

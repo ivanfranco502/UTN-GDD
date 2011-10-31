@@ -56,6 +56,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                     com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
                     con.Open();
                     SqlDataReader reader = com.ExecuteReader();
+                    //veo si el numero de tarjeta está repetido
                     if(reader.Read()){
                         //ya existe esa tarjeta
                         MessageBox.Show("El número de tarjeta ingresado ya existe", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
@@ -65,15 +66,29 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                     else
                     {
                         reader.Close();
-                        com = new SqlCommand("insert into ntvc.tarjeta (nro_tarjeta, fecha_alta, credito, cod_cliente) values (@nro_tarjeta, @fecha_alta, @cred, @cod_cliente)",con);
-                        com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
-                        com.Parameters.AddWithValue("@fecha_alta", this.textFechaAlta.Text);
-                        com.Parameters.AddWithValue("@cred", 0);
-                        com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
-                        com.ExecuteNonQuery();
-                        this.Close();
-                        MessageBox.Show("La tarjeta ha sido agregada.", "Alta exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                        con.Close();
+                        com = new SqlCommand("select * from NTVC.TARJETA where cod_cliente = @cod_cliente", con);
+                        com.Parameters.AddWithValue("@cod_cliente", textCliente.Text);
+                        reader = com.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            //el cliente ya tiene asignada una tarjeta
+                            MessageBox.Show("El cliente ya tiene una tarjeta asignada.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                            reader.Close();
+                            con.Close();
+                        }
+                        else
+                        {
+                            reader.Close();
+                            com = new SqlCommand("insert into ntvc.tarjeta (nro_tarjeta, fecha_alta, credito, cod_cliente) values (@nro_tarjeta, @fecha_alta, @cred, @cod_cliente)", con);
+                            com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
+                            com.Parameters.AddWithValue("@fecha_alta", this.textFechaAlta.Text);
+                            com.Parameters.AddWithValue("@cred", 0);
+                            com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
+                            com.ExecuteNonQuery();
+                            this.Close();
+                            MessageBox.Show("La tarjeta ha sido agregada.", "Alta exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                            con.Close();
+                        }
                     }
                 }
                 else

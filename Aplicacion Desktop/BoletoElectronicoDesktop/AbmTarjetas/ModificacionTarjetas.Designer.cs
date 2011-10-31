@@ -155,5 +155,6 @@
         private System.Windows.Forms.Label label1;
 
         public string nro_tarjeta_viejo = "";
+        public string cod_cliente_viejo = "";
     }
 }

@@ -30,6 +30,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                 textFechaAlta.Text = reader["fecha_alta"].ToString();
                 textNumeroTarjeta.Text = reader["nro_tarjeta"].ToString();
             }
+            cod_cliente_viejo = textCliente.Text;
             reader.Close();
             con.Close();
         }
@@ -78,22 +79,37 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                     else
                     {
                         reader.Close();
-                        com = new SqlCommand("update ntvc.tarjeta set nro_tarjeta = @nro_tarjeta, cod_cliente = @cod_cliente, habilitado = @habilitado where nro_tarjeta = @nro_viejo", con);
-                        com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
-                        if (chkHabilitado.Checked)
+                        com = new SqlCommand("select * from NTVC.TARJETA where cod_cliente = @cod_cliente", con);
+                        com.Parameters.AddWithValue("@cod_cliente", textCliente.Text);
+                        reader = com.ExecuteReader();
+                        if (reader.Read() && reader["cod_cliente"].ToString() != cod_cliente_viejo)
                         {
-                            com.Parameters.AddWithValue("@habilitado", "1");
+                            //el cliente ya tiene asignada una tarjeta
+                            MessageBox.Show("El cliente ya tiene una tarjeta asignada.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                            textCliente.Text = cod_cliente_viejo;
+                            reader.Close();
+                            con.Close();
                         }
                         else
                         {
-                            com.Parameters.AddWithValue("@habilitado", "0");
+                            reader.Close();
+                            com = new SqlCommand("update ntvc.tarjeta set nro_tarjeta = @nro_tarjeta, cod_cliente = @cod_cliente, habilitado = @habilitado where nro_tarjeta = @nro_viejo", con);
+                            com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
+                            if (chkHabilitado.Checked)
+                            {
+                                com.Parameters.AddWithValue("@habilitado", "1");
+                            }
+                            else
+                            {
+                                com.Parameters.AddWithValue("@habilitado", "0");
+                            }
+                            com.Parameters.AddWithValue("@nro_viejo", nro_tarjeta_viejo);
+                            com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
+                            com.ExecuteNonQuery();
+                            this.Close();
+                            MessageBox.Show("La tarjeta ha sido modificada.", "Modificación exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                            con.Close();
                         }
-                        com.Parameters.AddWithValue("@nro_viejo", nro_tarjeta_viejo);
-                        com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
-                        com.ExecuteNonQuery();
-                        this.Close();
-                        MessageBox.Show("La tarjeta ha sido modificada.", "Modificación exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                        con.Close();
                     }
                 }
                 else
