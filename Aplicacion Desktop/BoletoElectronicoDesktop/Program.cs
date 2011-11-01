@@ -141,6 +141,30 @@ namespace BoletoElectronicoDesktop
             return resultado;
         }
 
+        //llena los tipos de documento posibles
+        public static void llenarTipoDoc(ComboBox cb)
+        {
+            cb.Items.Insert(0, "DNI");
+            cb.Items.Insert(1, "LE");
+            cb.Items.Insert(2, "LC");
+        }
+
+        public static string obtenerTipoDoc(int indice)
+        {
+            switch (indice)
+            {
+                case 0:
+                    return "DNI";
+                case 1:
+                    return "LE";
+                case 2:
+                    return "LC";
+                default:
+                    return "NTVC";
+            }
+        }
+
+
     }
 
 }

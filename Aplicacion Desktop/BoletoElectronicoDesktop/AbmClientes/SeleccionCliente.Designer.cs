@@ -39,17 +39,6 @@
             this.botLimpiar = new System.Windows.Forms.Button();
             this.botBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.botModificar = new System.Windows.Forms.Button();
             this.botEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -128,6 +117,7 @@
             this.botLimpiar.TabIndex = 49;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // botBuscar
             // 
@@ -137,93 +127,17 @@
             this.botBuscar.TabIndex = 48;
             this.botBuscar.Text = "Buscar";
             this.botBuscar.UseVisualStyleBackColor = true;
+            this.botBuscar.Click += new System.EventHandler(this.botBuscar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellido,
-            this.DNI,
-            this.Teléfono,
-            this.Mail,
-            this.Calle,
-            this.Número,
-            this.Piso,
-            this.Depto,
-            this.Provincia,
-            this.Seleccionar});
             this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(416, 126);
             this.dataGridView1.TabIndex = 47;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Teléfono";
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            // 
-            // Mail
-            // 
-            this.Mail.HeaderText = "Mail";
-            this.Mail.Name = "Mail";
-            this.Mail.ReadOnly = true;
-            // 
-            // Calle
-            // 
-            this.Calle.HeaderText = "Calle";
-            this.Calle.Name = "Calle";
-            this.Calle.ReadOnly = true;
-            // 
-            // Número
-            // 
-            this.Número.HeaderText = "Número";
-            this.Número.Name = "Número";
-            this.Número.ReadOnly = true;
-            // 
-            // Piso
-            // 
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.ReadOnly = true;
-            // 
-            // Depto
-            // 
-            this.Depto.HeaderText = "Depto.";
-            this.Depto.Name = "Depto";
-            this.Depto.ReadOnly = true;
-            // 
-            // Provincia
-            // 
-            this.Provincia.HeaderText = "Provincia";
-            this.Provincia.Name = "Provincia";
-            this.Provincia.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Text = "Seleccionar";
-            this.Seleccionar.UseColumnTextForButtonValue = true;
             // 
             // botModificar
             // 
@@ -233,6 +147,7 @@
             this.botModificar.TabIndex = 60;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // botEliminar
             // 
@@ -242,6 +157,7 @@
             this.botEliminar.TabIndex = 59;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
             // 
             // SeleccionCliente
             // 
@@ -282,17 +198,6 @@
         private System.Windows.Forms.Button botLimpiar;
         private System.Windows.Forms.Button botBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Número;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private System.Windows.Forms.Button botModificar;
         private System.Windows.Forms.Button botEliminar;
     }
