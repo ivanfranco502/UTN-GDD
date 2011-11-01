@@ -38,7 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textDNI = new System.Windows.Forms.TextBox();
+            this.textTD = new System.Windows.Forms.TextBox();
             this.textTelefono = new System.Windows.Forms.TextBox();
             this.textMail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textProvincia = new System.Windows.Forms.TextBox();
             this.botEliminar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textDoc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(11, 96);
+            this.groupBox1.Location = new System.Drawing.Point(11, 131);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(418, 82);
             this.groupBox1.TabIndex = 62;
@@ -147,28 +149,28 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Calle:";
             // 
-            // textDNI
+            // textTD
             // 
-            this.textDNI.Location = new System.Drawing.Point(63, 38);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.ReadOnly = true;
-            this.textDNI.Size = new System.Drawing.Size(146, 20);
-            this.textDNI.TabIndex = 61;
+            this.textTD.Location = new System.Drawing.Point(118, 38);
+            this.textTD.Name = "textTD";
+            this.textTD.ReadOnly = true;
+            this.textTD.Size = new System.Drawing.Size(91, 20);
+            this.textTD.TabIndex = 61;
             // 
             // textTelefono
             // 
-            this.textTelefono.Location = new System.Drawing.Point(283, 38);
+            this.textTelefono.Location = new System.Drawing.Point(68, 64);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.ReadOnly = true;
-            this.textTelefono.Size = new System.Drawing.Size(146, 20);
+            this.textTelefono.Size = new System.Drawing.Size(141, 20);
             this.textTelefono.TabIndex = 60;
             // 
             // textMail
             // 
-            this.textMail.Location = new System.Drawing.Point(63, 64);
+            this.textMail.Location = new System.Drawing.Point(68, 90);
             this.textMail.Name = "textMail";
             this.textMail.ReadOnly = true;
-            this.textMail.Size = new System.Drawing.Size(146, 20);
+            this.textMail.Size = new System.Drawing.Size(360, 20);
             this.textMail.TabIndex = 59;
             // 
             // label9
@@ -176,14 +178,14 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(10, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.Size = new System.Drawing.Size(102, 13);
             this.label9.TabIndex = 58;
-            this.label9.Text = "DNI:";
+            this.label9.Text = "Tipo de documento:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(225, 41);
+            this.label8.Location = new System.Drawing.Point(10, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 57;
@@ -192,7 +194,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 67);
+            this.label7.Location = new System.Drawing.Point(10, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 56;
@@ -200,18 +202,18 @@
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(283, 12);
+            this.textApellido.Location = new System.Drawing.Point(298, 12);
             this.textApellido.Name = "textApellido";
             this.textApellido.ReadOnly = true;
-            this.textApellido.Size = new System.Drawing.Size(146, 20);
+            this.textApellido.Size = new System.Drawing.Size(131, 20);
             this.textApellido.TabIndex = 55;
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(63, 12);
+            this.textNombre.Location = new System.Drawing.Point(68, 12);
             this.textNombre.Name = "textNombre";
             this.textNombre.ReadOnly = true;
-            this.textNombre.Size = new System.Drawing.Size(146, 20);
+            this.textNombre.Size = new System.Drawing.Size(141, 20);
             this.textNombre.TabIndex = 54;
             // 
             // label2
@@ -234,31 +236,51 @@
             // 
             // textProvincia
             // 
-            this.textProvincia.Location = new System.Drawing.Point(283, 64);
+            this.textProvincia.Location = new System.Drawing.Point(298, 64);
             this.textProvincia.Name = "textProvincia";
             this.textProvincia.ReadOnly = true;
-            this.textProvincia.Size = new System.Drawing.Size(146, 20);
+            this.textProvincia.Size = new System.Drawing.Size(131, 20);
             this.textProvincia.TabIndex = 64;
             // 
             // botEliminar
             // 
-            this.botEliminar.Location = new System.Drawing.Point(178, 212);
+            this.botEliminar.Location = new System.Drawing.Point(181, 241);
             this.botEliminar.Name = "botEliminar";
             this.botEliminar.Size = new System.Drawing.Size(75, 23);
             this.botEliminar.TabIndex = 65;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(225, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 13);
+            this.label11.TabIndex = 66;
+            this.label11.Text = "Documento:";
+            // 
+            // textDoc
+            // 
+            this.textDoc.Location = new System.Drawing.Point(298, 38);
+            this.textDoc.Name = "textDoc";
+            this.textDoc.ReadOnly = true;
+            this.textDoc.Size = new System.Drawing.Size(131, 20);
+            this.textDoc.TabIndex = 67;
             // 
             // BajaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 244);
+            this.ClientSize = new System.Drawing.Size(440, 276);
+            this.Controls.Add(this.textDoc);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.botEliminar);
             this.Controls.Add(this.textProvincia);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textDNI);
+            this.Controls.Add(this.textTD);
             this.Controls.Add(this.textTelefono);
             this.Controls.Add(this.textMail);
             this.Controls.Add(this.label9);
@@ -289,7 +311,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textDNI;
+        private System.Windows.Forms.TextBox textTD;
         private System.Windows.Forms.TextBox textTelefono;
         private System.Windows.Forms.TextBox textMail;
         private System.Windows.Forms.Label label9;
@@ -301,5 +323,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textProvincia;
         private System.Windows.Forms.Button botEliminar;
+
+        public string tipo_doc_ = "";
+        public string doc_ = "";
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textDoc;
     }
 }

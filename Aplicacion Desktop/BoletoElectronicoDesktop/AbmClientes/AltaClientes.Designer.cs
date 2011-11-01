@@ -51,6 +51,8 @@
             this.botGuardar = new System.Windows.Forms.Button();
             this.botLimpiar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxTD = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(11, 96);
+            this.groupBox1.Location = new System.Drawing.Point(13, 126);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(418, 82);
             this.groupBox1.TabIndex = 29;
@@ -137,38 +139,38 @@
             // 
             // textDNI
             // 
-            this.textDNI.Location = new System.Drawing.Point(63, 38);
+            this.textDNI.Location = new System.Drawing.Point(296, 38);
             this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(146, 20);
+            this.textDNI.Size = new System.Drawing.Size(133, 20);
             this.textDNI.TabIndex = 28;
             // 
             // textTelefono
             // 
-            this.textTelefono.Location = new System.Drawing.Point(283, 38);
+            this.textTelefono.Location = new System.Drawing.Point(296, 68);
             this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(146, 20);
+            this.textTelefono.Size = new System.Drawing.Size(133, 20);
             this.textTelefono.TabIndex = 27;
             // 
             // textMail
             // 
-            this.textMail.Location = new System.Drawing.Point(63, 64);
+            this.textMail.Location = new System.Drawing.Point(63, 100);
             this.textMail.Name = "textMail";
-            this.textMail.Size = new System.Drawing.Size(146, 20);
+            this.textMail.Size = new System.Drawing.Size(366, 20);
             this.textMail.TabIndex = 26;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 41);
+            this.label9.Location = new System.Drawing.Point(225, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.Size = new System.Drawing.Size(65, 13);
             this.label9.TabIndex = 25;
-            this.label9.Text = "DNI:";
+            this.label9.Text = "Documento:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(225, 41);
+            this.label8.Location = new System.Drawing.Point(225, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 24;
@@ -177,7 +179,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 67);
+            this.label7.Location = new System.Drawing.Point(10, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 23;
@@ -185,9 +187,9 @@
             // 
             // textApellido
             // 
-            this.textApellido.Location = new System.Drawing.Point(283, 12);
+            this.textApellido.Location = new System.Drawing.Point(296, 12);
             this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(146, 20);
+            this.textApellido.Size = new System.Drawing.Size(133, 20);
             this.textApellido.TabIndex = 22;
             // 
             // textNombre
@@ -218,7 +220,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(225, 67);
+            this.label10.Location = new System.Drawing.Point(10, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 30;
@@ -226,35 +228,56 @@
             // 
             // botGuardar
             // 
-            this.botGuardar.Location = new System.Drawing.Point(354, 207);
+            this.botGuardar.Location = new System.Drawing.Point(354, 236);
             this.botGuardar.Name = "botGuardar";
             this.botGuardar.Size = new System.Drawing.Size(75, 23);
             this.botGuardar.TabIndex = 33;
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // botLimpiar
             // 
-            this.botLimpiar.Location = new System.Drawing.Point(13, 207);
+            this.botLimpiar.Location = new System.Drawing.Point(13, 236);
             this.botLimpiar.Name = "botLimpiar";
             this.botLimpiar.Size = new System.Drawing.Size(75, 23);
             this.botLimpiar.TabIndex = 32;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(283, 64);
+            this.comboBox1.Location = new System.Drawing.Point(70, 68);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.Size = new System.Drawing.Size(139, 21);
             this.comboBox1.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 13);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Tipo de documento:";
+            // 
+            // comboBoxTD
+            // 
+            this.comboBoxTD.FormattingEnabled = true;
+            this.comboBoxTD.Location = new System.Drawing.Point(118, 41);
+            this.comboBoxTD.Name = "comboBoxTD";
+            this.comboBoxTD.Size = new System.Drawing.Size(91, 21);
+            this.comboBoxTD.TabIndex = 36;
             // 
             // AltaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 237);
+            this.ClientSize = new System.Drawing.Size(440, 271);
+            this.Controls.Add(this.comboBoxTD);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.botGuardar);
             this.Controls.Add(this.botLimpiar);
@@ -304,5 +327,7 @@
         private System.Windows.Forms.Button botGuardar;
         private System.Windows.Forms.Button botLimpiar;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxTD;
     }
 }
