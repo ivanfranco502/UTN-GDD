@@ -1,4 +1,6 @@
-﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
+﻿using System.Collections.Generic;
+
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
     partial class BajaBeneficiario
     {
@@ -55,6 +57,7 @@
             this.botEliminar.TabIndex = 66;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
             // 
             // groupBox1
             // 
@@ -232,5 +235,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textRubro;
+
+        public string razon_social_vieja = "";
+        public List<string> serials = new List<string>();
+
     }
 }

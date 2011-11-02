@@ -46,8 +46,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
             //chequeo que los campos sean numericos
             if ((FuncionesUtiles.esNumerico(textDNI) || FuncionesUtiles.estaVacio(textDNI)) && 
                 (FuncionesUtiles.esNumerico(textTelefono) || FuncionesUtiles.estaVacio(textTelefono)) && 
-                (FuncionesUtiles.esNumerico(textNumero) || FuncionesUtiles.estaVacio(textNumero)) && 
-                (FuncionesUtiles.esNumerico(textPiso) || FuncionesUtiles.estaVacio(textPiso)))
+                (FuncionesUtiles.esNumerico(textNumero) || FuncionesUtiles.estaVacio(textNumero)))
             {
                 if (textNombre.Text != "")
                 {
@@ -103,10 +102,6 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                 if (!FuncionesUtiles.esNumerico(textNumero) && !FuncionesUtiles.estaVacio(textNumero))
                 {
                     mensaje += "\n-Número";
-                }
-                if (!FuncionesUtiles.esNumerico(textPiso) && !FuncionesUtiles.estaVacio(textPiso))
-                {
-                    mensaje += "\n-Piso";
                 }
                 MessageBox.Show(mensaje, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                 

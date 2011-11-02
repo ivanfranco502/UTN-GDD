@@ -31,13 +31,6 @@
             this.botLimpiar = new System.Windows.Forms.Button();
             this.botBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.comboBoxRubro = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textNumero = new System.Windows.Forms.TextBox();
@@ -51,6 +44,7 @@
             this.textRazonSocial = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.botSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +57,7 @@
             this.botLimpiar.TabIndex = 67;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // botBuscar
             // 
@@ -72,65 +67,19 @@
             this.botBuscar.TabIndex = 66;
             this.botBuscar.Text = "Buscar";
             this.botBuscar.UseVisualStyleBackColor = true;
+            this.botBuscar.Click += new System.EventHandler(this.botBuscar_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RazonSocial,
-            this.Calle,
-            this.Número,
-            this.Piso,
-            this.Depto,
-            this.Rubro,
-            this.Seleccionar});
             this.dataGridView1.Location = new System.Drawing.Point(11, 219);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(418, 126);
             this.dataGridView1.TabIndex = 65;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razón Social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // Calle
-            // 
-            this.Calle.HeaderText = "Calle";
-            this.Calle.Name = "Calle";
-            this.Calle.ReadOnly = true;
-            // 
-            // Número
-            // 
-            this.Número.HeaderText = "Número";
-            this.Número.Name = "Número";
-            this.Número.ReadOnly = true;
-            // 
-            // Piso
-            // 
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.ReadOnly = true;
-            // 
-            // Depto
-            // 
-            this.Depto.HeaderText = "Depto.";
-            this.Depto.Name = "Depto";
-            this.Depto.ReadOnly = true;
-            // 
-            // Rubro
-            // 
-            this.Rubro.HeaderText = "Rubro";
-            this.Rubro.Name = "Rubro";
-            this.Rubro.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Text = "Seleccionar";
-            this.Seleccionar.UseColumnTextForButtonValue = true;
             // 
             // comboBoxRubro
             // 
@@ -246,11 +195,22 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "Razón Social:";
             // 
+            // botSeleccionar
+            // 
+            this.botSeleccionar.Location = new System.Drawing.Point(180, 374);
+            this.botSeleccionar.Name = "botSeleccionar";
+            this.botSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.botSeleccionar.TabIndex = 68;
+            this.botSeleccionar.Text = "Seleccionar";
+            this.botSeleccionar.UseVisualStyleBackColor = true;
+            this.botSeleccionar.Click += new System.EventHandler(this.botSeleccionar_Click);
+            // 
             // SeleccionarBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 356);
+            this.ClientSize = new System.Drawing.Size(440, 409);
+            this.Controls.Add(this.botSeleccionar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -274,13 +234,6 @@
         private System.Windows.Forms.Button botLimpiar;
         private System.Windows.Forms.Button botBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Número;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rubro;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private System.Windows.Forms.ComboBox comboBoxRubro;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textNumero;
@@ -294,6 +247,9 @@
         private System.Windows.Forms.TextBox textRazonSocial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button botSeleccionar;
+
+        public string razon_social = "";
 
     }
 }

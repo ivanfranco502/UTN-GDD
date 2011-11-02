@@ -49,12 +49,14 @@
             this.botAceptar.TabIndex = 1;
             this.botAceptar.Text = "Aceptar";
             this.botAceptar.UseVisualStyleBackColor = true;
+            this.botAceptar.Click += new System.EventHandler(this.botAceptar_Click);
             // 
             // Saldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(232, 79);
+            this.ControlBox = false;
             this.Controls.Add(this.botAceptar);
             this.Controls.Add(this.labelSaldo);
             this.Name = "Saldo";
@@ -66,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelSaldo;
+        public System.Windows.Forms.Label labelSaldo;
         private System.Windows.Forms.Button botAceptar;
     }
 }

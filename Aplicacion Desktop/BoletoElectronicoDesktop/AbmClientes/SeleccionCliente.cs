@@ -40,27 +40,34 @@ namespace BoletoElectronicoDesktop.AbmClientes
 
         private void botBuscar_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Conexion.conectar();
-            con.Open();
-            string busqueda = "select c.nombre as Nombre, c.apellido as Apellido, c.tipo_doc as Tipo, c.doc as Documento, p.nombre as Provincia, c.mail as Mail, c.telefono as Teléfono, c.dir_calle as Calle, c.dir_nro as Número, c.dir_piso as Piso, c.dir_dpto as Depto from NTVC.Cliente c, NTVC.provincia p where c.cod_provincia = p.cod_provincia and ";
-            if (!FuncionesUtiles.estaVacio(textApellido))
+            if (!FuncionesUtiles.esNumerico(textDNI) && !FuncionesUtiles.estaVacio(textDNI))
             {
-                busqueda += "c.apellido like '%" + textApellido.Text + "%' and ";
+                MessageBox.Show("El documento debe ser numérico.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
             }
-            if(!FuncionesUtiles.estaVacio(textNombre))
+            else
             {
-                busqueda += "c.nombre like '%" + textNombre.Text + "%' and ";
+                SqlConnection con = Conexion.conectar();
+                con.Open();
+                string busqueda = "select c.nombre as Nombre, c.apellido as Apellido, c.tipo_doc as Tipo, c.doc as Documento, p.nombre as Provincia, c.mail as Mail, c.telefono as Teléfono, c.dir_calle as Calle, c.dir_nro as Número, c.dir_piso as Piso, c.dir_dpto as Depto from NTVC.Cliente c, NTVC.provincia p where c.cod_provincia = p.cod_provincia and ";
+                if (!FuncionesUtiles.estaVacio(textApellido))
+                {
+                    busqueda += "c.apellido like '%" + textApellido.Text + "%' and ";
+                }
+                if (!FuncionesUtiles.estaVacio(textNombre))
+                {
+                    busqueda += "c.nombre like '%" + textNombre.Text + "%' and ";
+                }
+                if (!FuncionesUtiles.estaVacio(textDNI))
+                {
+                    busqueda += "c.doc = " + textDNI.Text + " and ";
+                }
+                if (comboBox1.SelectedIndex > -1)
+                {
+                    busqueda += "p.nombre = '" + comboBox1.Items[comboBox1.SelectedIndex].ToString().Trim() + "' and ";
+                }
+                busqueda += "1=1";
+                FuncionesUtiles.llenarDataGridView(busqueda, dataGridView1);
             }
-            if(!FuncionesUtiles.estaVacio(textDNI))
-            {
-                busqueda += "c.doc = " + textDNI.Text + " and ";
-            }
-            if (comboBox1.SelectedIndex > -1)
-            {
-                busqueda += "p.nombre = '" + comboBox1.Items[comboBox1.SelectedIndex].ToString().Trim() + "' and ";
-            }
-            busqueda += "1=1";
-            FuncionesUtiles.llenarDataGridView(busqueda, dataGridView1);
 
         }
 

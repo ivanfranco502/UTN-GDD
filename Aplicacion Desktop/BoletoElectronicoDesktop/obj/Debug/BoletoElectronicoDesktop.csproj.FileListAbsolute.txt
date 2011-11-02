@@ -40,3 +40,4 @@ C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronico
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.pdb
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.AltaBeneficiario.resources
 C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmTarjetas.AltaTarjetas.resources
+C:\Users\Nachito\Desktop\NoTeVaConsultarGDD\Aplicacion Desktop\BoletoElectronicoDesktop\obj\Debug\BoletoElectronicoDesktop.AbmBeneficiarios.QuitarPostNets.resources

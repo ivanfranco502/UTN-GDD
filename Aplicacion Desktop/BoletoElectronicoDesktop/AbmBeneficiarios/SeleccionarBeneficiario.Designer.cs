@@ -1,4 +1,7 @@
-﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
+﻿using System.Collections.Generic;
+
+
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
     partial class SeleccionarBeneficiario
     {
@@ -29,7 +32,7 @@
         private void InitializeComponent()
         {
             this.comboBoxRubro = new System.Windows.Forms.ComboBox();
-            this.botSeleccionarBeneficiario = new System.Windows.Forms.Button();
+            this.botAgregarPostNets = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textNumero = new System.Windows.Forms.TextBox();
             this.textCalle = new System.Windows.Forms.TextBox();
@@ -47,15 +50,9 @@
             this.botLimpiar = new System.Windows.Forms.Button();
             this.botBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Número = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.botModificar = new System.Windows.Forms.Button();
             this.botEliminar = new System.Windows.Forms.Button();
+            this.botQuitarPostNets = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,14 +65,15 @@
             this.comboBoxRubro.Size = new System.Drawing.Size(359, 21);
             this.comboBoxRubro.TabIndex = 53;
             // 
-            // botSeleccionarBeneficiario
+            // botAgregarPostNets
             // 
-            this.botSeleccionarBeneficiario.Location = new System.Drawing.Point(327, 128);
-            this.botSeleccionarBeneficiario.Name = "botSeleccionarBeneficiario";
-            this.botSeleccionarBeneficiario.Size = new System.Drawing.Size(108, 23);
-            this.botSeleccionarBeneficiario.TabIndex = 52;
-            this.botSeleccionarBeneficiario.Text = "Seleccionar";
-            this.botSeleccionarBeneficiario.UseVisualStyleBackColor = true;
+            this.botAgregarPostNets.Location = new System.Drawing.Point(301, 128);
+            this.botAgregarPostNets.Name = "botAgregarPostNets";
+            this.botAgregarPostNets.Size = new System.Drawing.Size(65, 23);
+            this.botAgregarPostNets.TabIndex = 52;
+            this.botAgregarPostNets.Text = "Agregar";
+            this.botAgregarPostNets.UseVisualStyleBackColor = true;
+            this.botAgregarPostNets.Click += new System.EventHandler(this.botAgregarPostNets_Click);
             // 
             // groupBox1
             // 
@@ -163,7 +161,7 @@
             this.textPostNets.Location = new System.Drawing.Point(76, 130);
             this.textPostNets.Name = "textPostNets";
             this.textPostNets.ReadOnly = true;
-            this.textPostNets.Size = new System.Drawing.Size(245, 20);
+            this.textPostNets.Size = new System.Drawing.Size(219, 20);
             this.textPostNets.TabIndex = 50;
             // 
             // label9
@@ -208,6 +206,7 @@
             this.botLimpiar.TabIndex = 56;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // botBuscar
             // 
@@ -217,65 +216,19 @@
             this.botBuscar.TabIndex = 55;
             this.botBuscar.Text = "Buscar";
             this.botBuscar.UseVisualStyleBackColor = true;
+            this.botBuscar.Click += new System.EventHandler(this.botBuscar_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RazonSocial,
-            this.Calle,
-            this.Número,
-            this.Piso,
-            this.Depto,
-            this.Rubro,
-            this.Seleccionar});
             this.dataGridView1.Location = new System.Drawing.Point(17, 255);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(418, 126);
             this.dataGridView1.TabIndex = 54;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razón Social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // Calle
-            // 
-            this.Calle.HeaderText = "Calle";
-            this.Calle.Name = "Calle";
-            this.Calle.ReadOnly = true;
-            // 
-            // Número
-            // 
-            this.Número.HeaderText = "Número";
-            this.Número.Name = "Número";
-            this.Número.ReadOnly = true;
-            // 
-            // Piso
-            // 
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.ReadOnly = true;
-            // 
-            // Depto
-            // 
-            this.Depto.HeaderText = "Depto.";
-            this.Depto.Name = "Depto";
-            this.Depto.ReadOnly = true;
-            // 
-            // Rubro
-            // 
-            this.Rubro.HeaderText = "Rubro";
-            this.Rubro.Name = "Rubro";
-            this.Rubro.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.Text = "Seleccionar";
-            this.Seleccionar.UseColumnTextForButtonValue = true;
             // 
             // botModificar
             // 
@@ -285,6 +238,7 @@
             this.botModificar.TabIndex = 58;
             this.botModificar.Text = "Modificar";
             this.botModificar.UseVisualStyleBackColor = true;
+            this.botModificar.Click += new System.EventHandler(this.botModificar_Click);
             // 
             // botEliminar
             // 
@@ -294,19 +248,31 @@
             this.botEliminar.TabIndex = 57;
             this.botEliminar.Text = "Eliminar";
             this.botEliminar.UseVisualStyleBackColor = true;
+            this.botEliminar.Click += new System.EventHandler(this.botEliminar_Click);
+            // 
+            // botQuitarPostNets
+            // 
+            this.botQuitarPostNets.Location = new System.Drawing.Point(372, 128);
+            this.botQuitarPostNets.Name = "botQuitarPostNets";
+            this.botQuitarPostNets.Size = new System.Drawing.Size(63, 23);
+            this.botQuitarPostNets.TabIndex = 59;
+            this.botQuitarPostNets.Text = "Quitar";
+            this.botQuitarPostNets.UseVisualStyleBackColor = true;
+            this.botQuitarPostNets.Click += new System.EventHandler(this.botQuitarPostNets_Click);
             // 
             // SeleccionarBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 447);
+            this.Controls.Add(this.botQuitarPostNets);
             this.Controls.Add(this.botModificar);
             this.Controls.Add(this.botEliminar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxRubro);
-            this.Controls.Add(this.botSeleccionarBeneficiario);
+            this.Controls.Add(this.botAgregarPostNets);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textPostNets);
             this.Controls.Add(this.label9);
@@ -326,7 +292,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBoxRubro;
-        private System.Windows.Forms.Button botSeleccionarBeneficiario;
+        private System.Windows.Forms.Button botAgregarPostNets;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textNumero;
         private System.Windows.Forms.TextBox textCalle;
@@ -344,14 +310,10 @@
         private System.Windows.Forms.Button botLimpiar;
         private System.Windows.Forms.Button botBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Número;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Piso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Depto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rubro;
-        private System.Windows.Forms.DataGridViewButtonColumn Seleccionar;
         private System.Windows.Forms.Button botModificar;
         private System.Windows.Forms.Button botEliminar;
+        private System.Windows.Forms.Button botQuitarPostNets;
+        
+        List<string> serials = new List<string>();
     }
 }

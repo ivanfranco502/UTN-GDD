@@ -1,4 +1,6 @@
-﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
+﻿using System.Collections.Generic;
+
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
     partial class AltaBeneficiario
     {
@@ -44,8 +46,9 @@
             this.textRazonSocial = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.botSeleccionarPostNets = new System.Windows.Forms.Button();
+            this.botAgregarPostNets = new System.Windows.Forms.Button();
             this.comboBoxRubro = new System.Windows.Forms.ComboBox();
+            this.botQuitarPostNets = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +60,7 @@
             this.botGuardar.TabIndex = 43;
             this.botGuardar.Text = "Guardar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // botLimpiar
             // 
@@ -66,6 +70,7 @@
             this.botLimpiar.TabIndex = 42;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // groupBox1
             // 
@@ -153,7 +158,7 @@
             this.textPostNets.Location = new System.Drawing.Point(66, 130);
             this.textPostNets.Name = "textPostNets";
             this.textPostNets.ReadOnly = true;
-            this.textPostNets.Size = new System.Drawing.Size(245, 20);
+            this.textPostNets.Size = new System.Drawing.Size(201, 20);
             this.textPostNets.TabIndex = 40;
             // 
             // label9
@@ -190,14 +195,15 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Razón Social:";
             // 
-            // botSeleccionarPostNets
+            // botAgregarPostNets
             // 
-            this.botSeleccionarPostNets.Location = new System.Drawing.Point(317, 128);
-            this.botSeleccionarPostNets.Name = "botSeleccionarPostNets";
-            this.botSeleccionarPostNets.Size = new System.Drawing.Size(108, 23);
-            this.botSeleccionarPostNets.TabIndex = 44;
-            this.botSeleccionarPostNets.Text = "Seleccionar";
-            this.botSeleccionarPostNets.UseVisualStyleBackColor = true;
+            this.botAgregarPostNets.Location = new System.Drawing.Point(273, 128);
+            this.botAgregarPostNets.Name = "botAgregarPostNets";
+            this.botAgregarPostNets.Size = new System.Drawing.Size(73, 23);
+            this.botAgregarPostNets.TabIndex = 44;
+            this.botAgregarPostNets.Text = "Agregar";
+            this.botAgregarPostNets.UseVisualStyleBackColor = true;
+            this.botAgregarPostNets.Click += new System.EventHandler(this.botAgregarPostNets_Click);
             // 
             // comboBoxRubro
             // 
@@ -207,13 +213,24 @@
             this.comboBoxRubro.Size = new System.Drawing.Size(359, 21);
             this.comboBoxRubro.TabIndex = 45;
             // 
-            // AltaBeneficarios
+            // botQuitarPostNets
+            // 
+            this.botQuitarPostNets.Location = new System.Drawing.Point(352, 128);
+            this.botQuitarPostNets.Name = "botQuitarPostNets";
+            this.botQuitarPostNets.Size = new System.Drawing.Size(73, 23);
+            this.botQuitarPostNets.TabIndex = 46;
+            this.botQuitarPostNets.Text = "Quitar";
+            this.botQuitarPostNets.UseVisualStyleBackColor = true;
+            this.botQuitarPostNets.Click += new System.EventHandler(this.botQuitarPostNets_Click);
+            // 
+            // AltaBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 237);
+            this.Controls.Add(this.botQuitarPostNets);
             this.Controls.Add(this.comboBoxRubro);
-            this.Controls.Add(this.botSeleccionarPostNets);
+            this.Controls.Add(this.botAgregarPostNets);
             this.Controls.Add(this.botGuardar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.groupBox1);
@@ -222,7 +239,7 @@
             this.Controls.Add(this.textRazonSocial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AltaBeneficarios";
+            this.Name = "AltaBeneficiario";
             this.Text = "Beneficiario - Alta";
             this.Load += new System.EventHandler(this.AltaBeneficarios_Load);
             this.groupBox1.ResumeLayout(false);
@@ -250,7 +267,10 @@
         private System.Windows.Forms.TextBox textRazonSocial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button botSeleccionarPostNets;
+        private System.Windows.Forms.Button botAgregarPostNets;
         private System.Windows.Forms.ComboBox comboBoxRubro;
+        private System.Windows.Forms.Button botQuitarPostNets;
+
+        public List<string> serials = new List<string>();
     }
 }
