@@ -1,4 +1,7 @@
-﻿namespace BoletoElectronicoDesktop.Facturación
+﻿using System.Collections.Generic;
+
+
+namespace BoletoElectronicoDesktop.Facturación
 {
     partial class Facturacion
     {
@@ -36,9 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textMonto = new System.Windows.Forms.TextBox();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.textNumeroTarjeta = new System.Windows.Forms.TextBox();
             this.botSeleccionarFecha = new System.Windows.Forms.Button();
             this.botEfectuarCompra = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -68,6 +71,7 @@
             this.botSeleccionarBenficiario.TabIndex = 2;
             this.botSeleccionarBenficiario.Text = "Seleccionar";
             this.botSeleccionarBenficiario.UseVisualStyleBackColor = true;
+            this.botSeleccionarBenficiario.Click += new System.EventHandler(this.botSeleccionarBenficiario_Click);
             // 
             // label2
             // 
@@ -113,27 +117,27 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Monto:";
             // 
-            // textBox2
+            // textMonto
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 8;
+            this.textMonto.Location = new System.Drawing.Point(115, 112);
+            this.textMonto.Name = "textMonto";
+            this.textMonto.Size = new System.Drawing.Size(174, 20);
+            this.textMonto.TabIndex = 8;
             // 
-            // textBox3
+            // textFecha
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 9;
+            this.textFecha.Location = new System.Drawing.Point(114, 86);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.ReadOnly = true;
+            this.textFecha.Size = new System.Drawing.Size(174, 20);
+            this.textFecha.TabIndex = 9;
             // 
-            // textBox4
+            // textNumeroTarjeta
             // 
-            this.textBox4.Location = new System.Drawing.Point(114, 60);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 10;
+            this.textNumeroTarjeta.Location = new System.Drawing.Point(114, 60);
+            this.textNumeroTarjeta.Name = "textNumeroTarjeta";
+            this.textNumeroTarjeta.Size = new System.Drawing.Size(174, 20);
+            this.textNumeroTarjeta.TabIndex = 10;
             // 
             // botSeleccionarFecha
             // 
@@ -143,6 +147,7 @@
             this.botSeleccionarFecha.TabIndex = 11;
             this.botSeleccionarFecha.Text = "Seleccionar";
             this.botSeleccionarFecha.UseVisualStyleBackColor = true;
+            this.botSeleccionarFecha.Click += new System.EventHandler(this.botSeleccionarFecha_Click);
             // 
             // botEfectuarCompra
             // 
@@ -152,6 +157,7 @@
             this.botEfectuarCompra.TabIndex = 12;
             this.botEfectuarCompra.Text = "Efectuar compra";
             this.botEfectuarCompra.UseVisualStyleBackColor = true;
+            this.botEfectuarCompra.Click += new System.EventHandler(this.botEfectuarCompra_Click);
             // 
             // Facturacion
             // 
@@ -160,9 +166,9 @@
             this.ClientSize = new System.Drawing.Size(445, 200);
             this.Controls.Add(this.botEfectuarCompra);
             this.Controls.Add(this.botSeleccionarFecha);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textNumeroTarjeta);
+            this.Controls.Add(this.textFecha);
+            this.Controls.Add(this.textMonto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -188,10 +194,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textMonto;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox textNumeroTarjeta;
         private System.Windows.Forms.Button botSeleccionarFecha;
         private System.Windows.Forms.Button botEfectuarCompra;
+
+        public string cod_beneficiario_ = "";
+        public List<string> cods_postnets_ = new List<string>();
     }
 }

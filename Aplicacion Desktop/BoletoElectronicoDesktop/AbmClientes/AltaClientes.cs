@@ -92,7 +92,7 @@ namespace BoletoElectronicoDesktop.AbmClientes
             else
             {
                 //campos completos, verificar los numericos
-                if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textDNI, textNumero, textTelefono }) && (FuncionesUtiles.esNumerico(textPiso) || FuncionesUtiles.estaVacio(textPiso)))
+                if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textDNI, textNumero, textTelefono }))
                 {
                     //hay campos numericos con valores no numericos
                     string mensaje = "Los siguientes campos deben ser numéricos:";
@@ -107,10 +107,6 @@ namespace BoletoElectronicoDesktop.AbmClientes
                     if (!FuncionesUtiles.esNumerico(textNumero) && !FuncionesUtiles.estaVacio(textNumero))
                     {
                         mensaje += "\n-Número";
-                    }
-                    if (!FuncionesUtiles.esNumerico(textPiso) && !FuncionesUtiles.estaVacio(textPiso))
-                    {
-                        mensaje += "\n-Piso";
                     }
                     MessageBox.Show(mensaje, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);                    
                 }

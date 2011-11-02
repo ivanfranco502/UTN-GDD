@@ -1,4 +1,6 @@
-﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
+﻿using System.Collections.Generic;
+
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
     partial class SeleccionarPostNets
     {
@@ -31,16 +33,13 @@
             this.botLimpiar = new System.Windows.Forms.Button();
             this.botBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NumeroSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.textMarca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textModelo = new System.Windows.Forms.TextBox();
             this.textNumeroSerie = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.botAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +51,7 @@
             this.botLimpiar.TabIndex = 60;
             this.botLimpiar.Text = "Limpiar";
             this.botLimpiar.UseVisualStyleBackColor = true;
+            this.botLimpiar.Click += new System.EventHandler(this.botLimpiar_Click);
             // 
             // botBuscar
             // 
@@ -61,43 +61,19 @@
             this.botBuscar.TabIndex = 59;
             this.botBuscar.Text = "Buscar";
             this.botBuscar.UseVisualStyleBackColor = true;
+            this.botBuscar.Click += new System.EventHandler(this.botBuscar_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumeroSerie,
-            this.Marca,
-            this.Modelo,
-            this.Seleccionar});
             this.dataGridView1.Location = new System.Drawing.Point(16, 150);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(416, 126);
             this.dataGridView1.TabIndex = 58;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // NumeroSerie
-            // 
-            this.NumeroSerie.HeaderText = "Numero de serie";
-            this.NumeroSerie.Name = "NumeroSerie";
-            this.NumeroSerie.ReadOnly = true;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            // 
-            // Modelo
-            // 
-            this.Modelo.HeaderText = "Modelo";
-            this.Modelo.Name = "Modelo";
-            this.Modelo.ReadOnly = true;
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
             // 
             // textMarca
             // 
@@ -147,11 +123,22 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Número de serie:";
             // 
+            // botAgregar
+            // 
+            this.botAgregar.Location = new System.Drawing.Point(187, 298);
+            this.botAgregar.Name = "botAgregar";
+            this.botAgregar.Size = new System.Drawing.Size(75, 23);
+            this.botAgregar.TabIndex = 61;
+            this.botAgregar.Text = "Agregar";
+            this.botAgregar.UseVisualStyleBackColor = true;
+            this.botAgregar.Click += new System.EventHandler(this.botAgregar_Click);
+            // 
             // SeleccionarPostNets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 290);
+            this.ClientSize = new System.Drawing.Size(452, 333);
+            this.Controls.Add(this.botAgregar);
             this.Controls.Add(this.botLimpiar);
             this.Controls.Add(this.botBuscar);
             this.Controls.Add(this.dataGridView1);
@@ -161,6 +148,9 @@
             this.Controls.Add(this.textNumeroSerie);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SeleccionarPostNets";
             this.Text = "PostNets - Selección";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -180,9 +170,8 @@
         private System.Windows.Forms.TextBox textNumeroSerie;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroSerie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
+        private System.Windows.Forms.Button botAgregar;
+
+        public string serial_a = "";
     }
 }

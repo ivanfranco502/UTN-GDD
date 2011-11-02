@@ -1,4 +1,6 @@
-﻿namespace BoletoElectronicoDesktop.AbmBeneficiarios
+﻿using System.Collections.Generic;
+
+namespace BoletoElectronicoDesktop.AbmBeneficiarios
 {
     partial class ModificacionBeneficiario
     {
@@ -29,7 +31,6 @@
         private void InitializeComponent()
         {
             this.comboBoxRubro = new System.Windows.Forms.ComboBox();
-            this.botSeleccionarPostNets = new System.Windows.Forms.Button();
             this.botGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textNumero = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chkHabilitado = new System.Windows.Forms.CheckBox();
+            this.botQuitarPostNets = new System.Windows.Forms.Button();
+            this.botAgregarPostNets = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,23 +60,15 @@
             this.comboBoxRubro.Size = new System.Drawing.Size(359, 21);
             this.comboBoxRubro.TabIndex = 54;
             // 
-            // botSeleccionarPostNets
-            // 
-            this.botSeleccionarPostNets.Location = new System.Drawing.Point(320, 128);
-            this.botSeleccionarPostNets.Name = "botSeleccionarPostNets";
-            this.botSeleccionarPostNets.Size = new System.Drawing.Size(108, 23);
-            this.botSeleccionarPostNets.TabIndex = 53;
-            this.botSeleccionarPostNets.Text = "Seleccionar";
-            this.botSeleccionarPostNets.UseVisualStyleBackColor = true;
-            // 
             // botGuardar
             // 
             this.botGuardar.Location = new System.Drawing.Point(353, 207);
             this.botGuardar.Name = "botGuardar";
             this.botGuardar.Size = new System.Drawing.Size(75, 23);
             this.botGuardar.TabIndex = 52;
-            this.botGuardar.Text = "Guardar";
+            this.botGuardar.Text = "Modificar";
             this.botGuardar.UseVisualStyleBackColor = true;
+            this.botGuardar.Click += new System.EventHandler(this.botGuardar_Click);
             // 
             // groupBox1
             // 
@@ -161,7 +156,7 @@
             this.textPostNets.Location = new System.Drawing.Point(69, 130);
             this.textPostNets.Name = "textPostNets";
             this.textPostNets.ReadOnly = true;
-            this.textPostNets.Size = new System.Drawing.Size(245, 20);
+            this.textPostNets.Size = new System.Drawing.Size(201, 20);
             this.textPostNets.TabIndex = 50;
             // 
             // label9
@@ -210,14 +205,35 @@
             this.chkHabilitado.Text = "Habilitado";
             this.chkHabilitado.UseVisualStyleBackColor = true;
             // 
+            // botQuitarPostNets
+            // 
+            this.botQuitarPostNets.Location = new System.Drawing.Point(355, 128);
+            this.botQuitarPostNets.Name = "botQuitarPostNets";
+            this.botQuitarPostNets.Size = new System.Drawing.Size(73, 23);
+            this.botQuitarPostNets.TabIndex = 57;
+            this.botQuitarPostNets.Text = "Quitar";
+            this.botQuitarPostNets.UseVisualStyleBackColor = true;
+            this.botQuitarPostNets.Click += new System.EventHandler(this.botQuitarPostNets_Click);
+            // 
+            // botAgregarPostNets
+            // 
+            this.botAgregarPostNets.Location = new System.Drawing.Point(276, 128);
+            this.botAgregarPostNets.Name = "botAgregarPostNets";
+            this.botAgregarPostNets.Size = new System.Drawing.Size(73, 23);
+            this.botAgregarPostNets.TabIndex = 56;
+            this.botAgregarPostNets.Text = "Agregar";
+            this.botAgregarPostNets.UseVisualStyleBackColor = true;
+            this.botAgregarPostNets.Click += new System.EventHandler(this.botAgregarPostNets_Click);
+            // 
             // ModificacionBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 239);
+            this.Controls.Add(this.botQuitarPostNets);
+            this.Controls.Add(this.botAgregarPostNets);
             this.Controls.Add(this.chkHabilitado);
             this.Controls.Add(this.comboBoxRubro);
-            this.Controls.Add(this.botSeleccionarPostNets);
             this.Controls.Add(this.botGuardar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textPostNets);
@@ -226,7 +242,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ModificacionBeneficiario";
-            this.Text = "ModificacionBeneficiario";
+            this.Text = "Beneficiario - Modificación";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -237,7 +253,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBoxRubro;
-        private System.Windows.Forms.Button botSeleccionarPostNets;
         private System.Windows.Forms.Button botGuardar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textNumero;
@@ -254,5 +269,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkHabilitado;
+
+
+        public string razon_social_vieja = "";
+        public string cod_beneficiario_ = "";
+        public List<string> serials = new List<string>();
+        private System.Windows.Forms.Button botQuitarPostNets;
+        private System.Windows.Forms.Button botAgregarPostNets;
+
     }
 }

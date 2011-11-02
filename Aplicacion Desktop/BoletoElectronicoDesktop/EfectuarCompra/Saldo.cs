@@ -16,5 +16,10 @@ namespace BoletoElectronicoDesktop.Facturación
             InitializeComponent();
             this.Icon = BoletoElectronicoDesktop.Properties.Resources.NTVCSUBE1;
         }
+
+        private void botAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
