@@ -71,6 +71,27 @@ namespace BoletoElectronicoDesktop
             con.Close();
         }
 
+        //averigua si el textbox contiene un valor numerico decimal positivo
+        public static bool esDecimal(TextBox text)
+        {
+            decimal salida;
+            if (decimal.TryParse(text.Text, out salida))
+            {
+                if (salida >= 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         //averigua si el textbox contiene un valor numerico
         public static bool esNumerico(TextBox text)
         {

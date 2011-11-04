@@ -90,11 +90,11 @@ namespace BoletoElectronicoDesktop.Facturación
             else
             {
                 //campos completos, verificar los numericos
-                if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textMonto, textNumeroTarjeta }))
+                if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textNumeroTarjeta }) || !FuncionesUtiles.esDecimal(textMonto))
                 {
                     //hay campos numericos con valores no numericos
                     string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
-                    if (!FuncionesUtiles.esNumerico(textMonto))
+                    if (!FuncionesUtiles.esDecimal(textMonto))
                     {
                         mensaje += "\n-Monto";
                     }
