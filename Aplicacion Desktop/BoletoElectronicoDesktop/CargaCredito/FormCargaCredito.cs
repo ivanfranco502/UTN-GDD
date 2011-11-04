@@ -50,6 +50,10 @@ namespace BoletoElectronicoDesktop.CargaCredito
             }
             else
             {
+                if (!FuncionesUtiles.esNumerico(this.textNumeroTarjeta))
+                {
+                    MessageBox.Show("El campo número de tarjeta,debe ser numerico", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                }
                 if (FuncionesUtiles.esNumerico(this.textNumeroTarjeta))
                 {
                     //el valor de numero de tarjeta es numerico
