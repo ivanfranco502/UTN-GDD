@@ -35,7 +35,7 @@
             // 
             // botInhabilitar
             // 
-            this.botInhabilitar.Location = new System.Drawing.Point(286, 277);
+            this.botInhabilitar.Location = new System.Drawing.Point(344, 277);
             this.botInhabilitar.Name = "botInhabilitar";
             this.botInhabilitar.Size = new System.Drawing.Size(146, 27);
             this.botInhabilitar.TabIndex = 4;
@@ -48,14 +48,15 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 22);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(682, 234);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(746, 234);
             this.dataGridView1.TabIndex = 5;
             // 
             // InactividadTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 332);
+            this.ClientSize = new System.Drawing.Size(770, 332);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.botInhabilitar);
             this.Name = "InactividadTarjetas";

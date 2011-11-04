@@ -82,24 +82,35 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
                 }
                 if ((!FuncionesUtiles.estaVacio(textFechaFin)) && (!FuncionesUtiles.estaVacio(textFechaInicio)) && (!FuncionesUtiles.estaVacio(textBeneficiario)))
                 {
-                FuncionesUtiles.llenarDataGridView(select, dataGridView1);
+                    FuncionesUtiles.llenarDataGridView(select, dataGridView1);
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                 }
             }
 
         private void botRegistrarPago_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Conexion.conectar();
-            con.Open();
-            SqlCommand com = new SqlCommand("INSERT INTO ntvc.pago SELECT c.fecha,c.monto monto,c.cod_beneficiario cod_ben,c.cod_compra cod_compra FROM ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario WHERE b.razon_social=@razon_social and c.fecha between @fechaInicio and @fechaFin", con);
-            com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
-            com.Parameters.AddWithValue("@fechaInicio", this.textFechaInicio.Text);
-            com.Parameters.AddWithValue("@fechaFin", this.textFechaFin.Text);
-            com.ExecuteNonQuery();
-            this.Close();
-            MessageBox.Show("Los pagos se han registrado.", "Registro exitoso", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-            con.Close();
+            if ((!FuncionesUtiles.estaVacio(textFechaFin)) && (!FuncionesUtiles.estaVacio(textFechaInicio)) && (!FuncionesUtiles.estaVacio(textBeneficiario)))
+            {
+                SqlConnection con = Conexion.conectar();
+                con.Open();
+                SqlCommand com = new SqlCommand("INSERT INTO ntvc.pago SELECT c.fecha,c.monto monto,c.cod_beneficiario cod_ben,c.cod_compra cod_compra FROM ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario WHERE b.razon_social=@razon_social and c.fecha between @fechaInicio and @fechaFin", con);
+                com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
+                com.Parameters.AddWithValue("@fechaInicio", this.textFechaInicio.Text);
+                com.Parameters.AddWithValue("@fechaFin", this.textFechaFin.Text);
+                com.ExecuteNonQuery();
+                this.Close();
+                MessageBox.Show("Los pagos se han registrado.", "Registro exitoso", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                con.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar todos los campos", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+            }
         }
-        
 
      }
  }
