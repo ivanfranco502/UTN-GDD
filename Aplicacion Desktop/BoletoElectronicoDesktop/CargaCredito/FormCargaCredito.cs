@@ -28,7 +28,7 @@ namespace BoletoElectronicoDesktop.CargaCredito
 
         private void botCargarCredito_Click(object sender, EventArgs e)
         {
-            string cod_tarjeta;
+            
 
             if (FuncionesUtiles.estanVacios(new List<TextBox> { textNumeroTarjeta, textFecha, textMonto }))
             {
@@ -50,11 +50,21 @@ namespace BoletoElectronicoDesktop.CargaCredito
             }
             else
             {
-                if (!FuncionesUtiles.esNumerico(this.textNumeroTarjeta))
+                if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textNumeroTarjeta }) || !FuncionesUtiles.esDecimal(textMonto))
                 {
-                    MessageBox.Show("El campo número de tarjeta,debe ser numerico", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                    //hay campos numericos con valores no numericos
+                    string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
+                    if (!FuncionesUtiles.esDecimal(textMonto))
+                    {
+                        mensaje += "\n-Monto";
+                    }
+                    if (!FuncionesUtiles.esNumerico(textNumeroTarjeta))
+                    {
+                        mensaje += "\n-Número de tarjeta";
+                    }
+                    MessageBox.Show(mensaje, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                 }
-                if (FuncionesUtiles.esNumerico(this.textNumeroTarjeta))
+                else
                 {
                     //el valor de numero de tarjeta es numerico
                     SqlConnection con = Conexion.conectar();
@@ -62,29 +72,47 @@ namespace BoletoElectronicoDesktop.CargaCredito
                     com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
                     con.Open();
                     SqlDataReader reader = com.ExecuteReader();
-                    //veo si el numero de tarjeta está repetido
-                      if (reader.Read())
+                    //veo si el numero de tarjeta existe
+                    
+                    if (reader.Read())
+                    {
+                        //la tarjeta existe
+                        
+                        //verifico que este habilitada
+                        if (reader["habilitado"].ToString().Trim() == "1")
                         {
-                            //la tarjeta existe
-                            cod_tarjeta = reader["cod_tarjeta"].ToString().Trim();
+                            string cod_tarjeta = reader["cod_tarjeta"].ToString().Trim();
+                            decimal credito_nuevo = Convert.ToDecimal(reader["credito"].ToString().Trim()) + Convert.ToDecimal(textMonto.Text);
                             reader.Close();
+                            com = new SqlCommand("update ntvc.tarjeta set credito = @credito where cod_tarjeta = @cod_tarjeta", con);
+                            com.Parameters.AddWithValue("@credito", credito_nuevo);
+                            com.Parameters.AddWithValue("@cod_tarjeta", cod_tarjeta);
+                            com.ExecuteNonQuery();
                             com = new SqlCommand("insert into ntvc.carga (cod_tarjeta, fecha,monto) values (@cod_tarjeta, @fecha, @monto)", con);
                             com.Parameters.AddWithValue("@cod_tarjeta", cod_tarjeta);
                             com.Parameters.AddWithValue("@fecha", this.textFecha.Text);
                             com.Parameters.AddWithValue("@monto", this.textMonto.Text);
                             com.ExecuteNonQuery();
                             this.Close();
-                            MessageBox.Show("La tarjeta ha sido cargada.", "Carga exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                            con.Close();
+                            BoletoElectronicoDesktop.Facturación.Saldo form = new BoletoElectronicoDesktop.Facturación.Saldo();
+                            form.labelSaldo.Text = "La carga ha sido efectuada exitosamente.\nSu saldo es " + credito_nuevo.ToString() + ".";
+                            form.ShowDialog(this);                            
                         }
                         else
                         {
-                            MessageBox.Show("El número de tarjeta ingresado no existe", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                            //la tarjeta esta deshabilitada
                             reader.Close();
-                            con.Close();
+                            MessageBox.Show("La tarjeta se encuentra inhabilitada.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                         }
+                        con.Close();
                     }
-                
+                    else
+                    {
+                        MessageBox.Show("El número de tarjeta ingresado no existe.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                        reader.Close();
+                        con.Close();
+                    }
+                }     
             }     
         }
     }
