@@ -67,7 +67,7 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
         private void butBuscarVentas_Click(object sender, EventArgs e)
         {
 
-            string select = "SELECT  c.fecha FECHA,cli.apellido APELLIDO,cli.nombre NOMBRE,t.nro_tarjeta NRO_TARJETA,c.cod_postnet COD_POSNET,pos.marca MARCA,pos.modelo MODELO,c.monto MONTO FROM (((ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario) INNER JOIN ntvc.postnet pos ON pos.cod_postnet=c.cod_postnet) INNER JOIN ntvc.tarjeta t ON t.cod_tarjeta=c.cod_tarjeta) INNER JOIN ntvc.cliente cli ON cli.cod_cliente=t.cod_cliente WHERE b.razon_social=";
+            string select = "SELECT  c.fecha FECHA,cli.apellido APELLIDO,cli.nombre NOMBRE,t.nro_tarjeta NRO_TARJETA,c.cod_postnet COD_POSNET,pos.marca MARCA,pos.modelo MODELO,c.monto MONTO FROM (((ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario) INNER JOIN ntvc.postnet pos ON pos.cod_postnet=c.cod_postnet) INNER JOIN ntvc.tarjeta t ON t.cod_tarjeta=c.cod_tarjeta) INNER JOIN ntvc.cliente cli ON cli.cod_cliente=t.cod_cliente WHERE c.pagado=0 and b.razon_social=";
                 if (!FuncionesUtiles.estaVacio(textBeneficiario))
                 {
                     select +="'"+textBeneficiario.Text+"' and ";
@@ -100,6 +100,9 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
                 com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
                 com.Parameters.AddWithValue("@fechaInicio", this.textFechaInicio.Text);
                 com.Parameters.AddWithValue("@fechaFin", this.textFechaFin.Text);
+                com.ExecuteNonQuery();
+                com = new SqlCommand("DECLARE @cod_compra int DECLARE miCursor CURSOR FOR SELECT  c.cod_compra FROM (((ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario) INNER JOIN ntvc.postnet pos ON pos.cod_postnet=c.cod_postnet) INNER JOIN ntvc.tarjeta t ON t.cod_tarjeta=c.cod_tarjeta) INNER JOIN ntvc.cliente cli ON cli.cod_cliente=t.cod_cliente WHERE b.razon_social=@razon_social and  c.pagado=0 OPEN miCursor FETCH miCursor INTO @cod_compra WHILE (@@FETCH_STATUS = 0 )BEGIN UPDATE ntvc.compra	SET pagado=1 WHERE cod_compra=@cod_compra FETCH miCursor INTO @cod_compra END CLOSE miCursor DEALLOCATE miCursor", con);
+                com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
                 com.ExecuteNonQuery();
                 this.Close();
                 MessageBox.Show("Los pagos se han registrado.", "Registro exitoso", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
