@@ -69,9 +69,9 @@
             // 
             // botAnalizar
             // 
-            this.botAnalizar.Location = new System.Drawing.Point(332, 3);
+            this.botAnalizar.Location = new System.Drawing.Point(520, 7);
             this.botAnalizar.Name = "botAnalizar";
-            this.botAnalizar.Size = new System.Drawing.Size(168, 25);
+            this.botAnalizar.Size = new System.Drawing.Size(143, 21);
             this.botAnalizar.TabIndex = 3;
             this.botAnalizar.Text = "Ver clientes Premium";
             this.botAnalizar.UseVisualStyleBackColor = true;
@@ -82,14 +82,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 46);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(485, 117);
+            this.dataGridView1.Size = new System.Drawing.Size(648, 420);
             this.dataGridView1.TabIndex = 4;
             // 
             // ClientesPremium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 193);
+            this.ClientSize = new System.Drawing.Size(678, 478);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.botAnalizar);
             this.Controls.Add(this.label1);
