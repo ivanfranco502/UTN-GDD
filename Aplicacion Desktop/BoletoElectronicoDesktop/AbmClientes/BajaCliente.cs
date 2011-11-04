@@ -54,10 +54,23 @@ namespace BoletoElectronicoDesktop.AbmClientes
             com.Parameters.AddWithValue("@doc", doc_);
             com.Parameters.AddWithValue("@tipo_doc", tipo_doc_);
             com.ExecuteNonQuery();
+            //inhabilitar tarjeta correspondiente
+            com = new SqlCommand("select cod_cliente from ntvc.cliente where doc = @doc and tipo_doc = @tipo_doc", con);
+            com.Parameters.AddWithValue("@doc", doc_);
+            com.Parameters.AddWithValue("@tipo_doc", tipo_doc_);
+            SqlDataReader reader = com.ExecuteReader();
+            string cod_cliente = "";
+            if (reader.Read())
+            {
+                cod_cliente = reader["cod_cliente"].ToString().Trim();
+            }
+            reader.Close();
+            com = new SqlCommand("update ntvc.tarjeta set habilitado = 0 where cod_cliente = @cod_cliente", con);
+            com.Parameters.AddWithValue("@cod_cliente", cod_cliente);
+            com.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("El cliente ha sido eliminado.", "Eliminación exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
             this.Close();
-
         }
     }
 }

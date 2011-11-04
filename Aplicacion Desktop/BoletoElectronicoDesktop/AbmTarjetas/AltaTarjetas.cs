@@ -79,21 +79,40 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                         else
                         {
                             reader.Close();
-                            com = new SqlCommand("insert into ntvc.tarjeta (nro_tarjeta, fecha_alta, credito, cod_cliente) values (@nro_tarjeta, @fecha_alta, @cred, @cod_cliente)", con);
-                            com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
-                            com.Parameters.AddWithValue("@fecha_alta", this.textFechaAlta.Text);
-                            com.Parameters.AddWithValue("@cred", 0);
-                            com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
-                            com.ExecuteNonQuery();
-                            this.Close();
-                            MessageBox.Show("La tarjeta ha sido agregada.", "Alta exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                            bool habilitado = false;
+                            com = new SqlCommand("select habilitado from ntvc.cliente where cod_cliente = @cod_cliente", con);
+                            com.Parameters.AddWithValue("@cod_cliente", textCliente.Text);
+                            reader = com.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                if (reader["habilitado"].ToString().Trim() == "1")
+                                {
+                                    habilitado = true;
+                                }
+                            }
+                            reader.Close();
+                            if (habilitado)
+                            {
+                                com = new SqlCommand("insert into ntvc.tarjeta (nro_tarjeta, fecha_alta, credito, cod_cliente) values (@nro_tarjeta, @fecha_alta, @cred, @cod_cliente)", con);
+                                com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
+                                com.Parameters.AddWithValue("@fecha_alta", this.textFechaAlta.Text);
+                                com.Parameters.AddWithValue("@cred", 0);
+                                com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
+                                com.ExecuteNonQuery();
+                                this.Close();
+                                MessageBox.Show("La tarjeta ha sido agregada.", "Alta exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None); 
+                            }
+                            else
+                            {
+                                MessageBox.Show("El cliente se encuentra inhabilitado.\nNo se le puede asignar una tarjeta.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                            }
                             con.Close();
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("El número de tarjeta debe ser un valor numérico menor a 2000000000", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                    MessageBox.Show("El número de tarjeta debe ser un valor numérico, positivo y menor a 2000000000", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
                 }
 
             }

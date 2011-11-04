@@ -93,21 +93,41 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
                         else
                         {
                             reader.Close();
-                            com = new SqlCommand("update ntvc.tarjeta set nro_tarjeta = @nro_tarjeta, cod_cliente = @cod_cliente, habilitado = @habilitado where nro_tarjeta = @nro_viejo", con);
-                            com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
-                            if (chkHabilitado.Checked)
+                            bool habilitado = false;
+                            com = new SqlCommand("select habilitado from ntvc.cliente where cod_cliente = @cod_cliente", con);
+                            com.Parameters.AddWithValue("@cod_cliente", textCliente.Text);
+                            reader = com.ExecuteReader();
+                            if (reader.Read())
                             {
-                                com.Parameters.AddWithValue("@habilitado", "1");
+                                if (reader["habilitado"].ToString().Trim() == "1")
+                                {
+                                    habilitado = true;
+                                }
+                            }
+                            reader.Close();
+                            if (habilitado)
+                            {
+                                com = new SqlCommand("update ntvc.tarjeta set nro_tarjeta = @nro_tarjeta, cod_cliente = @cod_cliente, habilitado = @habilitado where nro_tarjeta = @nro_viejo", con);
+                                com.Parameters.AddWithValue("@nro_tarjeta", this.textNumeroTarjeta.Text);
+                                if (chkHabilitado.Checked)
+                                {
+                                    com.Parameters.AddWithValue("@habilitado", "1");
+                                }
+                                else
+                                {
+                                    com.Parameters.AddWithValue("@habilitado", "0");
+                                }
+                                com.Parameters.AddWithValue("@nro_viejo", nro_tarjeta_viejo);
+                                com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
+                                com.ExecuteNonQuery();
+                                this.Close();
+                                MessageBox.Show("La tarjeta ha sido modificada.", "Modificación exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                             }
                             else
                             {
-                                com.Parameters.AddWithValue("@habilitado", "0");
+                                MessageBox.Show("El cliente se encuentra inhabilitado.\nNo se le puede asignar una tarjeta.", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Hand);
+                                textCliente.Text = cod_cliente_viejo;
                             }
-                            com.Parameters.AddWithValue("@nro_viejo", nro_tarjeta_viejo);
-                            com.Parameters.AddWithValue("@cod_cliente", this.textCliente.Text);
-                            com.ExecuteNonQuery();
-                            this.Close();
-                            MessageBox.Show("La tarjeta ha sido modificada.", "Modificación exitosa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                             con.Close();
                         }
                     }
