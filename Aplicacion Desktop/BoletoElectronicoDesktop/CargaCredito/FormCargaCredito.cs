@@ -29,7 +29,6 @@ namespace BoletoElectronicoDesktop.CargaCredito
         private void botCargarCredito_Click(object sender, EventArgs e)
         {
             string cod_tarjeta;
-            string habilitado;
 
             if (FuncionesUtiles.estanVacios(new List<TextBox> { textNumeroTarjeta, textFecha, textMonto }))
             {
