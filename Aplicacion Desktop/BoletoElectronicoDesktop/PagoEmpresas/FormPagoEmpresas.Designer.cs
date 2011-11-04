@@ -38,16 +38,8 @@
             this.textBeneficiario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.butBuscarVentas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoPostNet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarcaPostNet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ModeloPostNet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.botRegistrarPago = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +51,7 @@
             this.botSeleccionarFechaInicio.TabIndex = 14;
             this.botSeleccionarFechaInicio.Text = "Seleccionar";
             this.botSeleccionarFechaInicio.UseVisualStyleBackColor = true;
+            this.botSeleccionarFechaInicio.Click += new System.EventHandler(this.botSeleccionarFechaInicio_Click);
             // 
             // textFechaInicio
             // 
@@ -85,6 +78,7 @@
             this.botSeleccionarFechaFin.TabIndex = 17;
             this.botSeleccionarFechaFin.Text = "Seleccionar";
             this.botSeleccionarFechaFin.UseVisualStyleBackColor = true;
+            this.botSeleccionarFechaFin.Click += new System.EventHandler(this.botSeleccionarFechaFin_Click);
             // 
             // textFechaFin
             // 
@@ -111,6 +105,7 @@
             this.botSeleccionarBenficiario.TabIndex = 20;
             this.botSeleccionarBenficiario.Text = "Seleccionar";
             this.botSeleccionarBenficiario.UseVisualStyleBackColor = true;
+            this.botSeleccionarBenficiario.Click += new System.EventHandler(this.botSeleccionarBenficiario_Click);
             // 
             // textBeneficiario
             // 
@@ -137,71 +132,7 @@
             this.butBuscarVentas.TabIndex = 21;
             this.butBuscarVentas.Text = "Buscar ventas";
             this.butBuscarVentas.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
-            this.Apellido,
-            this.Nombre,
-            this.NumeroTarjeta,
-            this.CodigoPostNet,
-            this.MarcaPostNet,
-            this.ModeloPostNet,
-            this.Monto});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(418, 141);
-            this.dataGridView1.TabIndex = 22;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // NumeroTarjeta
-            // 
-            this.NumeroTarjeta.HeaderText = "Número de tarjeta";
-            this.NumeroTarjeta.Name = "NumeroTarjeta";
-            this.NumeroTarjeta.ReadOnly = true;
-            // 
-            // CodigoPostNet
-            // 
-            this.CodigoPostNet.HeaderText = "Código PostNet";
-            this.CodigoPostNet.Name = "CodigoPostNet";
-            this.CodigoPostNet.ReadOnly = true;
-            // 
-            // MarcaPostNet
-            // 
-            this.MarcaPostNet.HeaderText = "Marca PostNet";
-            this.MarcaPostNet.Name = "MarcaPostNet";
-            this.MarcaPostNet.ReadOnly = true;
-            // 
-            // ModeloPostNet
-            // 
-            this.ModeloPostNet.HeaderText = "Modelo PostNet";
-            this.ModeloPostNet.Name = "ModeloPostNet";
-            this.ModeloPostNet.ReadOnly = true;
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
+            this.butBuscarVentas.Click += new System.EventHandler(this.butBuscarVentas_Click);
             // 
             // botRegistrarPago
             // 
@@ -211,14 +142,23 @@
             this.botRegistrarPago.TabIndex = 23;
             this.botRegistrarPago.Text = "Registrar pago";
             this.botRegistrarPago.UseVisualStyleBackColor = true;
+            this.botRegistrarPago.Click += new System.EventHandler(this.botRegistrarPago_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 165);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(385, 134);
+            this.dataGridView1.TabIndex = 24;
             // 
             // FormPagoEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 355);
-            this.Controls.Add(this.botRegistrarPago);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.botRegistrarPago);
             this.Controls.Add(this.butBuscarVentas);
             this.Controls.Add(this.botSeleccionarBenficiario);
             this.Controls.Add(this.textBeneficiario);
@@ -249,15 +189,7 @@
         private System.Windows.Forms.TextBox textBeneficiario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button butBuscarVentas;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroTarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoPostNet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarcaPostNet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ModeloPostNet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.Button botRegistrarPago;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

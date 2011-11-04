@@ -30,9 +30,9 @@
         {
             this.botCargarCredito = new System.Windows.Forms.Button();
             this.botSeleccionarFecha = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textNumeroTarjeta = new System.Windows.Forms.TextBox();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.textMonto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.botCargarCredito.TabIndex = 20;
             this.botCargarCredito.Text = "Cargar Crédito";
             this.botCargarCredito.UseVisualStyleBackColor = true;
+            this.botCargarCredito.Click += new System.EventHandler(this.botCargarCredito_Click);
             // 
             // botSeleccionarFecha
             // 
@@ -55,28 +56,29 @@
             this.botSeleccionarFecha.TabIndex = 19;
             this.botSeleccionarFecha.Text = "Seleccionar";
             this.botSeleccionarFecha.UseVisualStyleBackColor = true;
+            this.botSeleccionarFecha.Click += new System.EventHandler(this.botSeleccionarFecha_Click);
             // 
-            // textBox4
+            // textNumeroTarjeta
             // 
-            this.textBox4.Location = new System.Drawing.Point(111, 12);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 18;
+            this.textNumeroTarjeta.Location = new System.Drawing.Point(111, 12);
+            this.textNumeroTarjeta.Name = "textNumeroTarjeta";
+            this.textNumeroTarjeta.Size = new System.Drawing.Size(174, 20);
+            this.textNumeroTarjeta.TabIndex = 18;
             // 
-            // textBox3
+            // textFecha
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 17;
+            this.textFecha.Location = new System.Drawing.Point(111, 38);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.ReadOnly = true;
+            this.textFecha.Size = new System.Drawing.Size(174, 20);
+            this.textFecha.TabIndex = 17;
             // 
-            // textBox2
+            // textMonto
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 16;
+            this.textMonto.Location = new System.Drawing.Point(112, 64);
+            this.textMonto.Name = "textMonto";
+            this.textMonto.Size = new System.Drawing.Size(174, 20);
+            this.textMonto.TabIndex = 16;
             // 
             // label5
             // 
@@ -112,9 +114,9 @@
             this.ClientSize = new System.Drawing.Size(439, 147);
             this.Controls.Add(this.botCargarCredito);
             this.Controls.Add(this.botSeleccionarFecha);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textNumeroTarjeta);
+            this.Controls.Add(this.textFecha);
+            this.Controls.Add(this.textMonto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -129,9 +131,9 @@
 
         private System.Windows.Forms.Button botCargarCredito;
         private System.Windows.Forms.Button botSeleccionarFecha;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textNumeroTarjeta;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.TextBox textMonto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

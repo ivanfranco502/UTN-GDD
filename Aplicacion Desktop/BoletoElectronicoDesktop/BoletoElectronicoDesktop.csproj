@@ -267,6 +267,12 @@
     <Compile Include="PagoEmpresas\FormPagoEmpresas.Designer.cs">
       <DependentUpon>FormPagoEmpresas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PagoEmpresas\SeleccionarBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagoEmpresas\SeleccionarBeneficiario.designer.cs">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AbmBeneficiarios\AltaBeneficiario.resx">
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PagoEmpresas\FormPagoEmpresas.resx">
       <DependentUpon>FormPagoEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoEmpresas\SeleccionarBeneficiario.resx">
+      <DependentUpon>SeleccionarBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
