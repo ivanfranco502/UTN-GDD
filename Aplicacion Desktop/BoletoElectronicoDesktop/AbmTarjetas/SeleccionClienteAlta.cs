@@ -90,7 +90,7 @@ namespace BoletoElectronicoDesktop.AbmTarjetas
             }
             else
             {
-                string mensaje = "Los siguientes campos deben ser numéricos:";
+                string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
                 if (!FuncionesUtiles.esNumerico(textDNI) && !FuncionesUtiles.estaVacio(textDNI))
                 {
                     mensaje += "\n-Documento";

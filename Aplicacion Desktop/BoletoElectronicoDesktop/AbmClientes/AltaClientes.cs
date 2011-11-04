@@ -95,7 +95,7 @@ namespace BoletoElectronicoDesktop.AbmClientes
                 if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textDNI, textNumero, textTelefono }))
                 {
                     //hay campos numericos con valores no numericos
-                    string mensaje = "Los siguientes campos deben ser numéricos:";
+                    string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
                     if (!FuncionesUtiles.esNumerico(textDNI) && !FuncionesUtiles.estaVacio(textDNI))
                     {
                         mensaje += "\n-Documento";

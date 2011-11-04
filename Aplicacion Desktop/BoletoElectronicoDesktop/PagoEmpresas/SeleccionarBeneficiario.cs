@@ -45,7 +45,7 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
             if ((!FuncionesUtiles.esNumerico(textNumero) && !FuncionesUtiles.estaVacio(textNumero)))
             {
                 //hay campos numericos con valores no numericos
-                string mensaje = "Los siguientes campos deben ser numéricos:";
+                string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
                 if (!FuncionesUtiles.esNumerico(textNumero) && !FuncionesUtiles.estaVacio(textNumero))
                 {
                     mensaje += "\n-Número";

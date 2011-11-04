@@ -74,8 +74,8 @@ namespace BoletoElectronicoDesktop
         //averigua si el textbox contiene un valor numerico
         public static bool esNumerico(TextBox text)
         {
-            int salida;
-            if(int.TryParse(text.Text, out salida))
+            uint salida;
+            if(uint.TryParse(text.Text, out salida))
             {
                 return true;
             }
@@ -88,12 +88,12 @@ namespace BoletoElectronicoDesktop
         //analiza si los text boxes son numericos
         public static bool sonNumericos(List<TextBox> boxes)
         {
-            bool resultado = false;
+            bool resultado = true;
             foreach (TextBox box in boxes)
             {
-                if (esNumerico(box))
+                if (!esNumerico(box))
                 {
-                    resultado = true;
+                    resultado = false;
                 }
             }
             return resultado;

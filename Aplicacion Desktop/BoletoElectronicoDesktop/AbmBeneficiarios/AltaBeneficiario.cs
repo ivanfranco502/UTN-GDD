@@ -131,7 +131,7 @@ namespace BoletoElectronicoDesktop.AbmBeneficiarios
                 if (!FuncionesUtiles.sonNumericos(new List<TextBox> { textNumero }))
                 {
                     //hay campos numericos con valores no numericos
-                    string mensaje = "Los siguientes campos deben ser numéricos:";
+                    string mensaje = "Los siguientes campos deben ser numéricos y positivos:";
                     if (!FuncionesUtiles.esNumerico(textNumero) && !FuncionesUtiles.estaVacio(textNumero))
                     {
                         mensaje += "\n-Número";
