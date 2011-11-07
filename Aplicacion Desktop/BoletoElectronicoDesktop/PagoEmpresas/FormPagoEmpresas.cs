@@ -94,15 +94,34 @@ namespace BoletoElectronicoDesktop.PagoEmpresas
         {
             if ((!FuncionesUtiles.estaVacio(textFechaFin)) && (!FuncionesUtiles.estaVacio(textFechaInicio)) && (!FuncionesUtiles.estaVacio(textBeneficiario)))
             {
+                string consulta;
                 SqlConnection con = Conexion.conectar();
                 con.Open();
-                SqlCommand com = new SqlCommand("INSERT INTO ntvc.pago SELECT c.fecha,c.monto monto,c.cod_beneficiario cod_ben,c.cod_compra cod_compra FROM ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario WHERE b.razon_social=@razon_social and c.fecha between @fechaInicio and @fechaFin", con);
+                consulta = "insert into ntvc.pago (monto, cod_beneficiario, cod_compra)" +
+                                                    " select compra.monto, compra.cod_beneficiario, compra.cod_compra" +
+                                                        " from ntvc.compra compra, ntvc.beneficiario beneficiario" +
+                                                        " where beneficiario.razon_social = @razon_social and" +
+                                                              " compra.fecha between @fechaInicio and @fechaFin and" +
+                                                              " compra.cod_beneficiario = beneficiario.cod_beneficiario and" +
+                                                              " compra.pagado = 0";
+                SqlCommand com = new SqlCommand(consulta, con);
                 com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
                 com.Parameters.AddWithValue("@fechaInicio", this.textFechaInicio.Text);
                 com.Parameters.AddWithValue("@fechaFin", this.textFechaFin.Text);
                 com.ExecuteNonQuery();
-                com = new SqlCommand("DECLARE @cod_compra int DECLARE miCursor CURSOR FOR SELECT  c.cod_compra FROM (((ntvc.beneficiario b INNER JOIN ntvc.compra c ON b.cod_beneficiario=c.cod_beneficiario) INNER JOIN ntvc.postnet pos ON pos.cod_postnet=c.cod_postnet) INNER JOIN ntvc.tarjeta t ON t.cod_tarjeta=c.cod_tarjeta) INNER JOIN ntvc.cliente cli ON cli.cod_cliente=t.cod_cliente WHERE b.razon_social=@razon_social and  c.pagado=0 OPEN miCursor FETCH miCursor INTO @cod_compra WHILE (@@FETCH_STATUS = 0 )BEGIN UPDATE ntvc.compra	SET pagado=1 WHERE cod_compra=@cod_compra FETCH miCursor INTO @cod_compra END CLOSE miCursor DEALLOCATE miCursor", con);
+                consulta = "update ntvc.compra set pagado = 1" +
+                                        " from (select compra.monto, compra.cod_beneficiario, compra.cod_compra" +
+                                                    " from ntvc.compra compra, ntvc.beneficiario beneficiario" +
+                                                    " where beneficiario.razon_social = @razon_social and" +
+                                                          " compra.fecha between @fechaInicio and @fechaFin and" +
+                                                          " compra.cod_beneficiario = beneficiario.cod_beneficiario and" +
+                                                          " compra.pagado = 0) as aux" +
+                                        " where compra.cod_compra = aux.cod_compra";
+                com = new SqlCommand(consulta, con);
                 com.Parameters.AddWithValue("@razon_social", this.textBeneficiario.Text);
+                com.Parameters.AddWithValue("@fechaInicio", this.textFechaInicio.Text);
+                com.Parameters.AddWithValue("@fechaFin", this.textFechaFin.Text);
+
                 com.ExecuteNonQuery();
                 this.Close();
                 MessageBox.Show("Los pagos se han registrado.", "Registro exitoso", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);

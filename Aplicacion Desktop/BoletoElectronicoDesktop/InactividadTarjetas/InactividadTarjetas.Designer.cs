@@ -61,6 +61,7 @@
             this.Controls.Add(this.botInhabilitar);
             this.Name = "InactividadTarjetas";
             this.Text = "Inactividad de tarjetas";
+            this.Load += new System.EventHandler(this.InactividadTarjetas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

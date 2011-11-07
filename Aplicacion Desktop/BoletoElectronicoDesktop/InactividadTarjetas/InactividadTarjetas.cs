@@ -32,5 +32,10 @@ namespace BoletoElectronicoDesktop.InactividadTarjetas
             con.Close();
         }
 
+        private void InactividadTarjetas_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
