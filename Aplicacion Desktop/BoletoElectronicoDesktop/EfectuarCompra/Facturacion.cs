@@ -43,7 +43,7 @@ namespace BoletoElectronicoDesktop.Facturación
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    string pn = reader["modelo"].ToString().Trim() + " " + reader["marca"].ToString().Trim() + " (" + reader["nro_serie"].ToString().Trim() + ")";
+                    string pn = reader["marca"].ToString().Trim() + " " + reader["modelo"].ToString().Trim() + " (" + reader["nro_serie"].ToString().Trim() + ")";
                     comboBoxPostNet.Items.Add(pn);
                     cods_postnets_.Add(reader["cod_postnet"].ToString().Trim());
                 }
